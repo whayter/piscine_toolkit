@@ -4,13 +4,13 @@ Voilà une bonne base pour écrire son premier programme en C.
 
 ## Les instructions
 
-Un programme informatique est constitué d'une série d'instructions, c'est-à-dire des commandes données à l'ordinateur pour qu'il effectue une tâche spécifique. En C, les instructions se terminent par un point-virgule (;). 
+Un programme informatique est constitué d'une série d'instructions, c'est-à-dire de commandes données à l'ordinateur pour qu'il effectue des tâches spécifiques. En C, chaque instruction se termine par un point-virgule (;).
 
 ---
 
 ## Les commentaires
 
-Il n'est pas très commun de commencer la présentation du langage C en parlant des commentaires, mais je vais m'en servir tout au long de cette présentation. il est donc possible de commenter son programme, sur une ligne complète ou à la suite directe d'une instruction. Pour ce faire, il suffit d'insérer le symbole `//` suivit de son commentaire. 
+Commencer une introduction au langage C en parlant des commentaires n'est pas très commun, mais ils seront utilisés tout au long de cette présentation. Il est donc important de savoir comment commenter son programme. Les commentaires sont utiles pour expliquer le code, et il est recommandé d'en utiliser régulièrement. Il existe plusieurs façons de commenter en C, mais je vais me concentrer sur la méthode la plus simple : les commentaires sur une seule ligne. Pour cela, on utilise le symbole `//` suivi du commentaire.
 
 ```C
 // ceci est un commentaire sur une ligne complète
@@ -21,12 +21,12 @@ int age = 42; // ceci est un commenntaire en fin d'instruction
 
 ## Les variables et les types de données
 
-Les variables sont des conteneurs pour stocker des valeurs. En C, chaque variable doit être déclarée avec un type spécifique avant de pouvoir être utilisée. Une fois déclarée, une variable peut être instanciée, c'est-à-dire qu'on lui donne une valeur. On peut déclarer et instancier une variable dans une même instruction.
+Les variables sont des conteneurs utilisés pour stocker des valeurs. En C, chaque variable doit être déclarée avec un type spécifique avant de pouvoir être utilisée. Une fois déclarée, une variable peut être initialisée, c'est-à-dire qu'on lui attribue une valeur. Il est possible de déclarer et d'initialiser une variable dans une même instruction.
 
 ```C
 int age; // déclaration d'une variable de type int (entier) qu'on appelle age
-age = 42; // instanciation de la variable age
-int number = 7; // déclaration et instanciation d'une variable de type int qu'on appelle number
+age = 42; // initialisation de la variable age
+int number = 7; // déclaration et initialisation d'une variable de type int qu'on appelle number
 
 ```
 
