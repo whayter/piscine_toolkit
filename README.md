@@ -1,6 +1,6 @@
 # Introduction au C
 
-Voilà une bonne base pour écrire son premier programme en C. 
+Le C est un langage de programmation créé dans les années 1970, connu pour sa performance et sa flexibilité. Il permet un contrôle précis des ressources matérielles et est utilisé pour développer des systèmes d'exploitation, des logiciels et des applications embarquées. Sa simplicité et sa puissance en font un langage incontournable en informatique.
 
 ## Les instructions
 
