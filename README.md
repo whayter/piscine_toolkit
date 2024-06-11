@@ -1,12 +1,16 @@
 # Introduction au C
 
-Le C est un langage de programmation créé dans les années 1970, connu pour sa performance et sa flexibilité. Il permet un contrôle précis des ressources matérielles et est utilisé pour développer des systèmes d'exploitation, des logiciels et des applications embarquées. Sa simplicité et sa puissance en font un langage incontournable en informatique.
+<br/>
+
+Le C est un langage de programmation créé dans les années 1970, connu pour sa performance et sa flexibilité. En tant que langage de bas niveau, il se situe près du matériel informatique, permettant un contrôle précis des ressources matérielles telles que la mémoire et le processeur. Cela le rend idéal pour développer des systèmes d'exploitation, des logiciels et des applications embarquées. Sa simplicité et sa puissance en font un langage incontournable en informatique.
+
+<br/>
 
 ## Les instructions
 
 Un programme informatique est constitué d'une série d'instructions, c'est-à-dire de commandes données à l'ordinateur pour qu'il effectue des tâches spécifiques. En C, chaque instruction se termine par un point-virgule (;).
 
----
+<br/>
 
 ## Les commentaires
 
@@ -17,11 +21,11 @@ Commencer une introduction au langage C en parlant des commentaires n'est pas tr
 int age = 42; // ceci est un commenntaire en fin d'instruction
 ```
 
----
+<br/>
 
 ## Les variables et les types de données
 
-Les variables sont des conteneurs utilisés pour stocker des valeurs. En C, chaque variable doit être déclarée avec un type spécifique avant de pouvoir être utilisée. Une fois déclarée, une variable peut être initialisée, c'est-à-dire qu'on lui attribue une valeur. Il est possible de déclarer et d'initialiser une variable dans une même instruction.
+Les variables sont des conteneurs utilisés pour stocker des valeurs. En C, chaque variable doit être **déclarée** avec un **type** spécifique avant de pouvoir être utilisée. Une fois déclarée, une variable peut être **initialisée**, c'est-à-dire qu'on lui attribue une valeur. Il est possible de déclarer et d'initialiser une variable dans une même instruction.
 
 ```C
 int age; // déclaration d'une variable de type int (entier) qu'on appelle age
@@ -30,18 +34,20 @@ int number = 7; // déclaration et initialisation d'une variable de type int qu'
 
 ```
 
-I. Les types de données de base
+### I. Les types de données de base
+
+Dans le langage C, les variables peuvent stocker différents types de données, tels que des nombres entiers, des nombres à virgule flottante et des caractères. Ces types de données de base déterminent la nature et la taille des valeurs que les variables peuvent contenir. Ils sont essentiels pour décrire et manipuler les informations dans un programme. Voici quelques-uns des types de données de base les plus couramment utilisés en C :
 
 * les int servent à enregistrer des entiers : `int age = 42;`
 * les float servent à enregistrer des nombres décimaux : `float temperature = 36.5;`
 * les double servent à enregistrer des nombres décimaux avec une plus grand précision qu'avec un float : `double pi = 3.1415926535;`
 * les char servent à enregistrer des caractères individuels : `char letter = 'A';`
 
-II. Les tableaux
+###  II. Les tableaux
 
 Les tableaux sont des collections de variables du même type, stockées sous un même nom et accessibles par des indices.
 
----
+<br/>
 
 ## Les fonctions
 
