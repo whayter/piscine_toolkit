@@ -14,7 +14,7 @@ Un programme informatique est constitué d'une série d'instructions, c'est-à-d
 
 ## Les commentaires
 
-Commencer une introduction au langage C en parlant des commentaires n'est pas très commun, mais ils seront utilisés tout au long de cette présentation. Il est donc important de savoir comment commenter son programme. Les commentaires sont utiles pour expliquer le code, et il est recommandé d'en utiliser régulièrement. Il existe plusieurs façons de commenter en C, mais je vais me concentrer sur la méthode la plus simple : les commentaires sur une seule ligne. Pour cela, on utilise le symbole `//` suivi du commentaire.
+Commencer une introduction au langage C en parlant des commentaires n'est pas très commun, mais je vais les utiliser tout au long de cette présentation. Il est donc important de savoir comment commenter son programme. Les commentaires sont utiles pour expliquer le code, et il est recommandé d'en utiliser régulièrement. Il existe plusieurs façons de commenter en C, mais je vais me concentrer sur la méthode la plus simple : les commentaires sur une seule ligne. Pour cela, on utilise le symbole `//` suivi du commentaire :
 
 ```C
 // ceci est un commentaire sur une ligne complète
@@ -95,7 +95,7 @@ int result = addition(5, 3);
 ```
 Dans cet exemple, on déclare une variable de type int qui va stocker le résultat de l'appel à la fonction addition. 
 
-### Cas particuliers
+### Les fonctions sans paramètres et / ou sans retour
 
 Les fonctions peuvent aussi ne pas prendre de paramètres ou ne pas renvoyer de valeur. Voici un exemple de fonction qui affiche un message à l'écran :
 ```C
