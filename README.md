@@ -85,7 +85,7 @@ int addition(int a, int b)
 }
 ```
 
-Dans cette exemple, la fonction *addition* prend deux entiers *a* et *b* en paramètres et retourne également un entier, résultat de la somme de *a* et de *b.
+Dans cette exemple, la fonction *addition* prend deux entiers *a* et *b* en paramètres et retourne également un entier, résultat de la somme de *a* et de *b*.
 
 ### Appel d'une fonction
 
@@ -109,24 +109,30 @@ Ici, le mot clé *void* signigie que la fonction ne retourne aucune valeur. L'ap
 printMessage();
 ```
 
+### La focntion *main*
 
+En C, la fonction main est le point d'entrée de tout programme. Elle est la première à être exécutée et doit systématiquement être présente. Essentielle, elle dirige l'exécution globale. La fonction *main* peut être déclarée de plusieurs façons, mais les deux formes les plus courantes sont les suivantes :
 
+1. sans arguments :
 
-
-
-Tout programme en C a une fonction appelée main. C'est elle qui est appelée au lancement du programme. La fonction main retournera toujours un int,
 ```C
-int main()
+int main(void)
 {
-  return (0);
+    // code à exécuter
+    return (0);
 }
+```
 
-*** Exemples 
+2. avec arguments :
 
 ```C
-int addition(int a, int b)
+int main(int argc, char *argv[])
 {
-  return (a + b);
-};
+    // code à exécuter
+    return (0);
+}
 ```
+
+La fonction *main* retourne généralement un entier. Le type de retour int indique le code de sortie du programme. Par convention, un retour de 0 signifie que le programme s'est terminé avec succès.
+
 
