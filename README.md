@@ -2,7 +2,7 @@
 
 <br/>
 
-Le C est un langage de programmation créé dans les années 1970, connu pour sa performance et sa flexibilité. En tant que langage de bas niveau, il se situe près du matériel informatique, permettant un contrôle précis des ressources matérielles telles que la mémoire et le processeur. Cela le rend idéal pour développer des systèmes d'exploitation, des logiciels et des applications embarquées. Sa simplicité et sa puissance en font un langage incontournable en informatique.
+Le C est un langage de programmation créé dans les années 1970, connu pour sa performance et sa flexibilité. En tant que langage de bas niveau, il se situe près du matériel informatique, permettant un contrôle précis des ressources matérielles comme la mémoire et le processeur. Cela le rend idéal pour développer des systèmes d'exploitation, des logiciels et des applications embarquées. Sa simplicité et sa puissance en font un langage incontournable en informatique.
 
 <br/>
 
@@ -31,7 +31,6 @@ Les variables sont des conteneurs utilisés pour stocker des valeurs. En C, chaq
 int age; // déclaration d'une variable de type int (entier) qu'on appelle age
 age = 42; // initialisation de la variable age
 int number = 7; // déclaration et initialisation d'une variable de type int qu'on appelle number
-
 ```
 
 ### I. Les types de données de base
@@ -40,18 +39,58 @@ Dans le langage C, les variables peuvent stocker différents types de données, 
 
 * les int servent à enregistrer des entiers : `int age = 42;`
 * les float servent à enregistrer des nombres décimaux : `float temperature = 36.5;`
-* les double servent à enregistrer des nombres décimaux avec une plus grand précision qu'avec un float : `double pi = 3.1415926535;`
+* les double servent à enregistrer des nombres décimaux avec une plus grand précision qu'un float : `double pi = 3.1415926535;`
 * les char servent à enregistrer des caractères individuels : `char letter = 'A';`
 
 ###  II. Les tableaux
 
-Les tableaux sont des collections de variables du même type, stockées sous un même nom et accessibles par des indices.
+Les tableaux sont des collections de variables du même type qui sont stockées en mémoire de manière contigüe et sous un même nom. ils permettent donc de gérer et de manipuler efficacement des ensembles de données. Chaque élément d'un tableau est accessible via un indice, le premier élément ayant l'indice 0.
+
+Pour déclarer un tableau en C, on doit spécifier le type des éléments suivis du nom du tableau et du nombre d'éléments qu'il peut contenir :
+
+```C
+int numbers[5]; // déclaration d'un tableau de 5 entiers
+```
+
+Comme pour n'importe quelle variable, un tableau peut être initialisé au moment de la déclaration. Pour ce faire, on fournit l'ensemble des éléments entre accolades, séparés par des virgules :
+
+```C
+int numbers[3] = {1, 2, 3};
+```
+
+On accède ensuite aux éléments du tableau en spécifiant l'indice désiré entre crochets :
+
+```C
+int firstNumber = numbers[0]; // on enregistre la valeur du premier élément du tableau numbers dans une variable firstNumber
+numbers[1] = 100; // on modifie la valeur du deuxième élément du tableau
+```
+
+Les tableaux sont particulièrement utiles pour travailler avec des séries de valeurs ou des collections de données, facilitant ainsi les opérations répétitives et les manipulations de grands ensembles de données.
 
 <br/>
 
 ## Les fonctions
 
-Les fonctions sont des blocs de code réutilisables qui effectuent une tâche spécifique. Elles permettent de structurer un programme en le découpant en sous-programmes plus petits et plus faciles à gérer. Une fonction prend éventuellement des paramètres en entrée, exécute une série d'instructions, et peut retourner une valeur.
+Les fonctions sont des blocs de code réutilisables qui effectuent une tâche spécifique. Elles permettent de structurer un programme en le découpant en sous-programmes plus petits et plus faciles à gérer. Les fonctions peuvent prendre des arguments en entrée et renvoyer une valeur en sortie.
+
+### Déclaration et définition d'une fonction
+
+Une fonction en C est **déclarée** avec un type de retour, un nom et une liste de paramètres. Par exemple, voici comment déclarer une fonction qui additionne deux entiers :
+
+```C
+int addition(int a, int b);
+```
+
+La **définition** de la fonction fournit le corps de la fonction, où les opérations sont effectuées :
+
+```C
+int addition(int a, int b)
+{
+    return (a + b);
+}
+```
+
+Dans cette exemple, la fonction *addition* prend deux entiers *a* et *b* en paramètres et retourne également un entier, résultat de la somme de *a* et de *b*. 
 
 
 
