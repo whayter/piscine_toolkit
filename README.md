@@ -47,19 +47,16 @@ Dans le langage C, les variables peuvent stocker différents types de données, 
 Les tableaux sont des collections de variables du même type qui sont stockées en mémoire de manière contigüe et sous un même nom. ils permettent donc de gérer et de manipuler efficacement des ensembles de données. Chaque élément d'un tableau est accessible via un indice, le premier élément ayant l'indice 0.
 
 Pour déclarer un tableau en C, on doit spécifier le type des éléments suivis du nom du tableau et du nombre d'éléments qu'il peut contenir :
-
 ```C
 int numbers[5]; // déclaration d'un tableau de 5 entiers
 ```
 
 Comme pour n'importe quelle variable, un tableau peut être initialisé au moment de la déclaration. Pour ce faire, on fournit l'ensemble des éléments entre accolades, séparés par des virgules :
-
 ```C
 int numbers[3] = {1, 2, 3};
 ```
 
 On accède ensuite aux éléments du tableau en spécifiant l'indice désiré entre crochets :
-
 ```C
 int firstNumber = numbers[0]; // on enregistre la valeur du premier élément du tableau numbers dans une variable firstNumber
 numbers[1] = 100; // on modifie la valeur du deuxième élément du tableau
@@ -76,13 +73,11 @@ Les fonctions sont des blocs de code réutilisables qui effectuent une tâche sp
 ### Déclaration et définition d'une fonction
 
 Une fonction en C est **déclarée** avec un type de retour, un nom et une liste de paramètres. Par exemple, voici comment déclarer une fonction qui additionne deux entiers :
-
 ```C
 int addition(int a, int b);
 ```
 
 La **définition** de la fonction fournit le corps de la fonction, où les opérations sont effectuées :
-
 ```C
 int addition(int a, int b)
 {
@@ -90,7 +85,30 @@ int addition(int a, int b)
 }
 ```
 
-Dans cette exemple, la fonction *addition* prend deux entiers *a* et *b* en paramètres et retourne également un entier, résultat de la somme de *a* et de *b*. 
+Dans cette exemple, la fonction *addition* prend deux entiers *a* et *b* en paramètres et retourne également un entier, résultat de la somme de *a* et de *b.
+
+### Appel d'une fonction
+
+Une fois qu'une fonction est déclarée et définie, on peut l'appeler dans notre programme en utilisant son nom et en fournissant les arguments nécessaires :
+```C
+int result = addition(5, 3);
+```
+Dans cet exemple, on déclare une variable de type int qui va stocker le résultat de l'appel à la fonction addition. 
+
+### Cas particuliers
+
+Les fonctions peuvent aussi ne pas prendre de paramètres ou ne pas renvoyer de valeur. Voici un exemple de fonction qui affiche un message à l'écran :
+```C
+void printMessage()
+{
+    printf("Hello World!\n");
+}
+```
+Ici, le mot clé *void* signigie que la fonction ne retourne aucune valeur. L'appel à cette fonction est fait de cette façon : 
+```C
+printMessage();
+```
+
 
 
 
