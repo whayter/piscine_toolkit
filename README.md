@@ -74,11 +74,11 @@ numbers[1] = 100; // on modifie la valeur du deuxième élément du tableau
 
 ### III. Les pointeurs
 
-Lorsqu'une variable est déclarée, un espace en mémoire est reservé pour enregistrer sa valeur. Cet espace possède une adresse. Les pointeurs sont des variables qui permettent d'enregistrer des adresses mémoire. Ça semble simple sur le papier mais c'est une notion qui pose problème à beaucoup de monde.
+Lorsqu'une variable est déclarée, un espace en mémoire est reservé pour enregistrer sa valeur. Cet espace possède une adresse. Les pointeurs sont des variables qui permettent d'enregistrer des adresses mémoire.
 
 #### Déclaration
 
-Pour déclarer un pointeur en C, on utilise le type de données auquel le pointeur va pointer, suivi de l'opérateur *. Si le pointeur pointe vers une variable de type int, on parlera alors d'un "pointeur sur int". 
+Pour déclarer un pointeur en C, on utilise le type de données auquel le pointeur va pointer, suivi de l'opérateur `*`. Si le pointeur pointe vers une variable de type int, on parlera alors d'un "pointeur sur int". 
 ```C
 int* ptr; // déclaration d'un pointeur sur int qu'on appelle ptr
 ```
@@ -87,11 +87,35 @@ int* ptr; // déclaration d'un pointeur sur int qu'on appelle ptr
 
 Puisqu'un pointeur enregistre une adresse, on ne peut pas l'initialiser ainsi :
 
-
 ```C
 int number = 42;
 int* ptr = &number;
 ```
+Dans cet exemple, on utilise l'opérateur `&` qui sert à **déréférencer** une variable. `number` vaut 42, mais `&number` vaut l'adresse mémoire qui contient la variable `number`.
+
+
+Pour récupérer la valeur contenue à une adresse, on utilise l'**opérateur de déréférencement** `*` :
+```C
+int number = 42;
+int* ptr = &number;
+int ptrValue = *ptr;
+```
+
+Les pointeurs peuvent se cululer :
+```C
+
+int*** ptr;
+
+Dans ce cas, ptr a pour valeur l'adresse de *ptr. *ptr a pour valeur l'adresse de **ptr. **ptr a pour valeur l'adresse de ***ptr
+
+int number = 42;
+int* ptr1 = &number;
+int** ptr2 = &ptr1;
+```
+
+|: Addresse en mémoire   |: 0x00   :|: 0x01 :|: 0x02 :|: 0x03 :|: 0x04 :|: 0x05 :|
+|: Nom de la variable    |: number :|:      :|: ptr1 :|:      :|:      :|: ptr2 :|
+|: Valeur contenue       |: 42     :|:      :|: 0x00 :|:      :|:      :|: 0x02 :|
 
 
 
