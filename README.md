@@ -101,24 +101,24 @@ int* ptr = &number;
 int ptrValue = *ptr;
 ```
 
-Les pointeurs peuvent se cululer :
+
+Puisqu'un pointeur n'est qu'une variable contenant une adresse mémoire, on peut avoir un pointeur faisant référence à un autre pointeur :
 ```C
-
-int*** ptr;
-
-Dans ce cas, ptr a pour valeur l'adresse de *ptr. *ptr a pour valeur l'adresse de **ptr. **ptr a pour valeur l'adresse de ***ptr
-
 int number = 42;
 int* ptr1 = &number;
-int** ptr2 = &ptr1;
+int** ptr2 = &ptr1; // ptr2 pointe vers ptr1
 ```
-
 
 | **Addresse  en  mémoire** | **Nom  de la  variable** | **Valeur  contenue** |
 |:-------------------------:|:------------------------:|:--------------------:|
 |            0x00           |          number          |          42          |
 |            0x01           |           ptr1           |         0x00         |
 |            0x02           |           ptr2           |         0x01         |
+
+Dans cet exemple, la variable `number` contient `42` et est enregistrée à l'adresse `0x00`. La variable `ptr1` est enregistrée à l'adresse 0x01, et contient l'adresse de la variable `number`, c'est à dire `0x00`. La variable `ptr2` est enregistrée à l'adresse `0x02`, et contient l'adresse de `ptr1`, c'est à dire `0x01`.
+
+Si on déréférence `ptr2`, on obtient `ptr1`. si on déréférence encore, on otbtien number : `*ptr2` vaut `0x01`, et `**ptr2` vaut `number`, c'est à dire `42`. 
+
 
 
 
