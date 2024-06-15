@@ -114,18 +114,11 @@ int** ptr2 = &ptr1;
 ```
 
 
-| Aligné à gauche  | Centré          | Aligné à droite |
-| :--------------- |:---------------:| -----:|
-| Aligné à gauche  |   ce texte        |  Aligné à droite |
-| Aligné à gauche  | est             |   Aligné à droite |
-| Aligné à gauche  | centré          |    Aligné à droite |
-
-
-
-|:----------------------:|:-----------------:|:------:|:------:|:------:|:------:|
-|: Addresse en mémoire   |: 0x00   :|: 0x01 :|: 0x02 :|: 0x03 :|: 0x04 :|: 0x05 :|
-|: Nom de la variable    |: number :|:      :|: ptr1 :|:      :|:      :|: ptr2 :|
-|: Valeur contenue       |: 42     :|:      :|: 0x00 :|:      :|:      :|: 0x02 :|
+| **Addresse  en  mémoire** | **Nom  de la  variable** | **Valeur  contenue** |
+|:-------------------------:|:------------------------:|:--------------------:|
+|            0x00           |          number          |          42          |
+|            0x01           |           ptr1           |         0x00         |
+|            0x02           |           ptr2           |         0x01         |
 
 
 
