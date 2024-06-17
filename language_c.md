@@ -151,11 +151,11 @@ int value = **ptr2; // value vaudra 42
 
 ## Les fonctions
 
-Les fonctions sont des blocs de code réutilisables qui effectuent une tâche spécifique. Elles permettent de structurer un programme en le découpant en sous-programmes plus petits et plus faciles à gérer. Les fonctions peuvent prendre des arguments en entrée et renvoyer une valeur en sortie.
+Les fonctions sont des blocs de code réutilisables qui effectuent une tâche spécifique. Elles permettent de structurer un programme en le découpant en sous-programmes plus petits et plus faciles à gérer. Les fonctions peuvent prendre des **arguments en entrée** et renvoyer une **valeur en sortie**.
 
 ### Déclaration et définition d'une fonction
 
-Une fonction en C est **déclarée** avec un type de retour, un nom et une liste de paramètres. Par exemple, voici comment déclarer une fonction qui additionne deux entiers :
+Une fonction en C est **déclarée** avec un type de retour, un nom et éventuellement une liste de paramètres entre parenthèses. Par exemple, voici comment déclarer une fonction qui additionne deux entiers :
 ```C
 int addition(int a, int b);
 ```
@@ -167,16 +167,15 @@ int addition(int a, int b)
     return (a + b);
 }
 ```
-
-Dans cette exemple, la fonction *addition* prend deux entiers *a* et *b* en paramètres et retourne également un entier, résultat de la somme de *a* et de *b*.
+Dans cette exemple, la fonction *addition* prend deux entiers `a` et `b` en paramètres et retourne un entier, résultat de la somme de `a` et de `b`.
 
 ### Appel d'une fonction
 
 Une fois qu'une fonction est déclarée et définie, on peut l'appeler dans notre programme en utilisant son nom et en fournissant les arguments nécessaires :
 ```C
-int result = addition(5, 3);
+int result = addition(5, 3); 
 ```
-Dans cet exemple, on déclare une variable de type int qui va stocker le résultat de l'appel à la fonction addition. 
+Dans cet exemple, on déclare une variable result de type int qui va stocker le résultat de l'appel à la fonction addition avec les paramètres 5 et 3. 
 
 ### Les fonctions sans paramètres et / ou sans retour
 
@@ -187,10 +186,7 @@ void printMessage()
     printf("Hello World!\n");
 }
 ```
-Ici, le mot clé *void* signigie que la fonction ne retourne aucune valeur. L'appel à cette fonction est fait de cette façon : 
-```C
-printMessage();
-```
+Ici, le mot clé `void` signigie que la fonction ne retourne aucune valeur. L'appel à cette fonction est fait de cette façon : `printMessage();`
 
 ### La focntion *main*
 
