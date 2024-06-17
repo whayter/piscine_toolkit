@@ -44,14 +44,14 @@ Dans le langage C, les variables peuvent stocker différents types de données, 
 
 Les tableaux sont des collections de variables du même type qui sont stockées en mémoire de manière contigüe et sous un même nom. Ils sont particulièrement utiles pour travailler avec des séries de valeurs ou des collections de données, facilitant ainsi les opérations répétitives et les manipulations de grands ensembles de données.
 
-#### Déclaration
+#### 1. Déclaration
 
 Pour déclarer un tableau en C, on doit spécifier le type des éléments suivis du nom du tableau et du nombre d'éléments qu'il peut contenir :
 ```C
 int numbers[5]; // déclaration d'un tableau de 5 entiers
 ```
 
-#### Initialisation
+#### 2. Initialisation
 
 Comme pour n'importe quelle variable, un tableau peut être initialisé au moment de la déclaration. Pour ce faire, on fournit l'ensemble des éléments entre accolades, séparés par des virgules :
 ```C
@@ -62,7 +62,7 @@ Dans ce cas, on peut laisser le compilateur déterminer la taille du tableau à 
 int numbers[] = {1, 2, 3};
 ```
 
-#### Accès aux éléments
+#### 3. Accès aux éléments
 
 Chaque élément d'un tableau est accessible via un indice, le premier élément ayant l'indice 0. On accède donc aux éléments du tableau en spécifiant l'indice désiré entre crochets :
 ```C
@@ -74,14 +74,14 @@ numbers[1] = 100; // on modifie la valeur du deuxième élément du tableau
 
 Lorsqu'une variable est déclarée, un espace en mémoire est reservé pour enregistrer sa valeur. Cet espace possède une adresse. Les pointeurs sont des variables qui permettent d'enregistrer des adresses mémoire.
 
-#### Déclaration
+#### 1. Déclaration
 
 Pour déclarer un pointeur en C, on utilise le type de données que le pointeur désigne, suivi de l'opérateur `*`. Si le pointeur pointe vers un espace mémoire contenant une variable de type int, on parlera d'un "pointeur sur int" :
 ```C
 int *ptr; // déclaration d'un pointeur sur int qu'on appelle ptr
 ```
 
-#### Initialisation
+#### 2. Initialisation
 
 En langage C, le symbole `&`, appelé **opérateur d'adresse**, est utilisé pour obtenir l'adresse mémoire d'une variable. Lorsqu'il est placé devant une variable, il renvoie l'adresse mémoire où cette variable est stockée. Pour initialiser notre pointeur sur int `ptr`, on va donc utiliser cet opérateur pour récupérer l'adresse mémoire d'un int : 
 ```C
@@ -89,14 +89,14 @@ int number = 42;
 int *ptr = &number;
 ```
 
-#### Déréférencement
+#### 3. Déréférencement
 
 Pour accéder à la valeur pointée par un pointeur, on utilise l'**opérateur de déréférencement** `*`. Par exemple, pour accéder à la valeur de number via ptr :
 ```C
 int value = *ptr; // value vaudra alors 42
 ```
 
-#### Pointeurs et tableaux
+#### 4. Pointeurs et tableaux
 
 Lorsqu'on déclare un tableau en C, la variable déclarée est en fait un pointeur vers le premier élément du tableau :
 ```C
@@ -109,7 +109,7 @@ Si on déréférence ptr, on obtiendra donc la valeur du premier élément de no
 int firstValue = *ptr // firstValue vaudra alors 1
 ```
 
-#### Arithmétique des pointeurs
+#### 5. Arithmétique des pointeurs
 
 On peut effectuer des opérations arithmétiques sur les pointeurs pour parcourir les éléments d'un tableau :
 ```C
@@ -117,7 +117,7 @@ ptr = ptr + 1; // en incrémentant ptr, on déplace le curseur d'un cran, *ptr v
 ptr++; // ceci est une autre façon d'incrémenter un pointeur. *ptr vaut alors 3
 ```
 
-#### Pointeur nul
+#### 6. Pointeur nul
 
 En C, on peut assigner à un pointeur la valeur `NULL` pour signifier qu'il ne pointe vers aucune adresse valide :
 ```C
@@ -125,7 +125,7 @@ int *ptr = NULL;
 ```
 Ça peut paraître trivial pour le moment, mais on verra plus tard que ça a son importance. 
 
-#### Les pointeurs de pointeur
+#### 7. Les pointeurs de pointeur
 
 Puisqu'un pointeur n'est qu'une variable contenant une adresse mémoire, on peut avoir un pointeur faisant référence à un autre pointeur :
 ```C
