@@ -2,21 +2,16 @@
 
 Le C est un langage de programmation créé dans les années 1970, connu pour sa performance et sa flexibilité. En tant que langage de bas niveau, il se situe près du matériel informatique, permettant un contrôle précis des ressources matérielles comme la mémoire et le processeur. Cela le rend idéal pour développer des systèmes d'exploitation, des logiciels et des applications embarquées. Sa simplicité et sa puissance en font un langage incontournable en informatique.
 
+Parler du fait que le C est un langage compilé !
 
 ## Les instructions
 
-Un programme informatique est constitué d'une série d'instructions, c'est-à-dire de commandes données à l'ordinateur pour qu'il effectue des tâches spécifiques. En C, chaque instruction se termine par un point-virgule.
-
-par exemple
-```C
-int number = 10; // déclaration d'un entier. Cette variable est enregistrée quelque part dans la mémoire de l'ordinateur. Cet espace en mémoire a une adresse. Sans elle, on ne serait pas capable de retrouver l'emplacement où la valeur a été enregistrée. 
-```
+Un programme informatique est constitué d'une série d'instructions, c'est-à-dire de commandes données à l'ordinateur pour qu'il effectue des tâches spécifiques. En C, chaque instruction se termine par un point-virgule : `int number = 10;`
 
 
 ## Les commentaires
 
-Commencer une introduction au langage C en parlant des commentaires n'est pas très commun, mais je vais les utiliser tout au long de cette présentation. Il est donc important de savoir comment commenter son programme. Les commentaires sont utiles pour expliquer le code, et il est recommandé d'en utiliser régulièrement. Il existe plusieurs façons de commenter en C, mais je vais me concentrer sur la méthode la plus simple : les commentaires sur une seule ligne. Pour cela, on utilise le symbole `//` suivi du commentaire :
-
+Commencer une introduction au langage C en parlant des commentaires n'est pas très commun, mais je vais les utiliser tout au long de cette présentation. Il est donc important de savoir comment commenter son programme. Les commentaires sont ignorés lors de l'éxecution du programme, mais sont très utiles pour expliquer le code, et il est recommandé d'en utiliser régulièrement. Il existe plusieurs façons de commenter en C, mais je vais me concentrer sur la méthode la plus simple : les commentaires sur une seule ligne. Pour cela, on utilise le symbole `//` suivi du commentaire :
 ```C
 // ceci est un commentaire sur une ligne complète
 int age = 42; // ceci est un commenntaire en fin d'instruction
@@ -26,7 +21,6 @@ int age = 42; // ceci est un commenntaire en fin d'instruction
 ## Les variables et les types de données
 
 Les variables sont des conteneurs utilisés pour stocker des valeurs. En C, chaque variable doit être **déclarée** avec un **type** spécifique avant de pouvoir être utilisée. Une fois déclarée, une variable peut être **initialisée**, c'est-à-dire qu'on lui attribue une valeur. Il est possible de déclarer et d'initialiser une variable dans une même instruction.
-
 ```C
 int age; // déclaration d'une variable de type int (entier) qu'on appelle age
 age = 42; // initialisation de la variable age
@@ -78,29 +72,56 @@ Lorsqu'une variable est déclarée, un espace en mémoire est reservé pour enre
 
 #### Déclaration
 
-Pour déclarer un pointeur en C, on utilise le type de données auquel le pointeur va pointer, suivi de l'opérateur `*`. Si le pointeur pointe vers une variable de type int, on parlera alors d'un "pointeur sur int". 
+Pour déclarer un pointeur en C, on utilise le type de données que le pointeur désigne, suivi de l'opérateur `*`. Si le pointeur pointe vers un espace mémoire contenant une variable de type int, on parlera d'un "pointeur sur int" :
 ```C
 int* ptr; // déclaration d'un pointeur sur int qu'on appelle ptr
 ```
 
 #### Initialisation
 
-Puisqu'un pointeur enregistre une adresse, on ne peut pas l'initialiser ainsi :
-
+En langage C, le symbole `&`, appelé **opérateur d'adresse**, est utilisé pour obtenir l'adresse mémoire d'une variable. Lorsqu'il est placé devant une variable, il renvoie l'adresse mémoire où cette variable est stockée. Pour initialiser notre pointeur sur int `ptr`, on va donc utiliser cet opérateur pour récupérer l'adresse mémoire d'un int : 
 ```C
 int number = 42;
 int* ptr = &number;
 ```
-Dans cet exemple, on utilise l'opérateur `&` qui sert à **déréférencer** une variable. `number` vaut 42, mais `&number` vaut l'adresse mémoire qui contient la variable `number`.
 
+#### Déréférencement
 
-Pour récupérer la valeur contenue à une adresse, on utilise l'**opérateur de déréférencement** `*` :
+Pour accéder à la valeur pointée par un pointeur, on utilise l'**opérateur de déréférencement** `*`. Par exemple, pour accéder à la valeur de number via ptr :
 ```C
-int number = 42;
-int* ptr = &number;
-int ptrValue = *ptr;
+int value = *ptr; // value vaudra alors 42
 ```
 
+#### Pointeurs et tableaux
+
+Lorsqu'on déclare un tableau en C, la variable déclarée est en fait un pointeur vers le premier élément du tableau :
+```C
+int numbers[3] = {1, 2, 3};
+int *ptr = numbers; // pas besoin de l'opérateur d'adresse ici, puisque numbers est considéré commme un pointeur vers le premier élément du tableau
+```
+
+Si on déréférence ptr, on obtiendra donc la valeur du premier élément de notre tableau, c'est à dire 1 :
+```C
+int firstValue = *ptr // firstValue vaudra alors 1
+```
+
+#### Arithmétique des pointeurs
+
+On peut effectuer des opérations arithmétiques sur les pointeurs pour parcourir les éléments d'un tableau :
+```C
+ptr = ptr + 1; // en incrémentant ptr, on déplace le curseur d'un cran, *ptr vaut alors 2
+ptr++; // ceci est une autre façon d'incrémenter un pointeur. *ptr vaut alors 3
+```
+
+#### Pointeur nul
+
+En C, on peut assigner à un pointeur la valeur `NULL` pour signifier qu'il ne pointe vers aucune adresse valide :
+```C
+int* ptr = NULL;
+```
+Ça peut paraître trivial pour le moment, mais on verra plus tard que ça a son importance. 
+
+#### Les pointeurs de pointeur
 
 Puisqu'un pointeur n'est qu'une variable contenant une adresse mémoire, on peut avoir un pointeur faisant référence à un autre pointeur :
 ```C
@@ -108,31 +129,19 @@ int number = 42;
 int* ptr1 = &number;
 int** ptr2 = &ptr1; // ptr2 pointe vers ptr1
 ```
-
+Voici un tableau illustrant la façon dont tout ça est enregistré en mémoire :
 | **Addresse  en  mémoire** | **Nom  de la  variable** | **Valeur  contenue** |
 |:-------------------------:|:------------------------:|:--------------------:|
 |            0x00           |          number          |          42          |
 |            0x01           |           ptr1           |         0x00         |
 |            0x02           |           ptr2           |         0x01         |
 
-Dans cet exemple, la variable `number` contient `42` et est enregistrée à l'adresse `0x00`. La variable `ptr1` est enregistrée à l'adresse 0x01, et contient l'adresse de la variable `number`, c'est à dire `0x00`. La variable `ptr2` est enregistrée à l'adresse `0x02`, et contient l'adresse de `ptr1`, c'est à dire `0x01`.
+La variable `number` contient `42` et est enregistrée à l'adresse `0x00`. La variable `ptr1` est enregistrée à l'adresse `0x01` et contient l'adresse de la variable `number`, c'est à dire `0x00`. La variable `ptr2` est enregistrée à l'adresse `0x02`, et contient l'adresse de `ptr1`, c'est à dire `0x01`.
 
-Si on déréférence `ptr2`, on obtient `ptr1`. si on déréférence encore, on otbtien number : `*ptr2` vaut `0x01`, et `**ptr2` vaut `number`, c'est à dire `42`. 
-
-
-
-
-Un pointeur est une variable qui enregistre une addresse en mémoire. Elle aura deux types de valeurs possibles :
-* NULL si la variable ne pointe vers aucune zone mémoire occupée
-* une addresse valide sinon
-
-Une adresse est un entier représenté en hexadécimal et préfixé de `0x`. Exemple : `0x1abe13ff`.
-
-
-
-
-
-
+Si on déréférence `ptr2`, on obtient `ptr1`. Si on déréférence deux fois ptr2, on obtiendra `number` :
+```C
+int value = **ptr2; // value vaudra 42
+```
 
 
 ## Les fonctions
