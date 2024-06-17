@@ -74,7 +74,7 @@ Lorsqu'une variable est déclarée, un espace en mémoire est reservé pour enre
 
 Pour déclarer un pointeur en C, on utilise le type de données que le pointeur désigne, suivi de l'opérateur `*`. Si le pointeur pointe vers un espace mémoire contenant une variable de type int, on parlera d'un "pointeur sur int" :
 ```C
-int* ptr; // déclaration d'un pointeur sur int qu'on appelle ptr
+int *ptr; // déclaration d'un pointeur sur int qu'on appelle ptr
 ```
 
 #### Initialisation
@@ -82,7 +82,7 @@ int* ptr; // déclaration d'un pointeur sur int qu'on appelle ptr
 En langage C, le symbole `&`, appelé **opérateur d'adresse**, est utilisé pour obtenir l'adresse mémoire d'une variable. Lorsqu'il est placé devant une variable, il renvoie l'adresse mémoire où cette variable est stockée. Pour initialiser notre pointeur sur int `ptr`, on va donc utiliser cet opérateur pour récupérer l'adresse mémoire d'un int : 
 ```C
 int number = 42;
-int* ptr = &number;
+int *ptr = &number;
 ```
 
 #### Déréférencement
@@ -117,7 +117,7 @@ ptr++; // ceci est une autre façon d'incrémenter un pointeur. *ptr vaut alors 
 
 En C, on peut assigner à un pointeur la valeur `NULL` pour signifier qu'il ne pointe vers aucune adresse valide :
 ```C
-int* ptr = NULL;
+int *ptr = NULL;
 ```
 Ça peut paraître trivial pour le moment, mais on verra plus tard que ça a son importance. 
 
@@ -126,8 +126,8 @@ int* ptr = NULL;
 Puisqu'un pointeur n'est qu'une variable contenant une adresse mémoire, on peut avoir un pointeur faisant référence à un autre pointeur :
 ```C
 int number = 42;
-int* ptr1 = &number;
-int** ptr2 = &ptr1; // ptr2 pointe vers ptr1
+int *ptr1 = &number;
+int **ptr2 = &ptr1; // ptr2 pointe vers ptr1
 ```
 Voici un tableau illustrant la façon dont tout ça est enregistré en mémoire :
 | **Addresse  en  mémoire** | **Nom  de la  variable** | **Valeur  contenue** |
