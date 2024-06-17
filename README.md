@@ -14,7 +14,7 @@ Un programme informatique est constitué d'une série d'instructions, c'est-à-d
 
 ## Les commentaires
 
-Commencer une introduction au langage C en parlant des commentaires n'est pas très commun, mais je vais les utiliser tout au long de cette présentation. Il est donc important de savoir comment commenter son programme. Les commentaires sont ignorés lors de l'éxecution du programme, mais sont très utiles pour expliquer le code, et il est recommandé d'en utiliser régulièrement. Il existe plusieurs façons de commenter en C, mais je vais me concentrer sur la méthode la plus simple : les commentaires sur une seule ligne. Pour cela, on utilise le symbole `//` suivi du commentaire :
+Dans un programme informatique, les commentaires apportent de très précieuses informations pour ceux qui sont amenées à manipuler le code. Les commentaires sont ignorés lors de l'éxecution du programme. Il existe plusieurs façons de commenter en C, mais concentrons nous sur la méthode la plus simple : les commentaires sur une seule ligne. Pour cela, on utilise le symbole `//` suivi du commentaire :
 ```C
 // ceci est un commentaire sur une ligne complète
 int age = 42; // ceci est un commenntaire en fin d'instruction
@@ -76,7 +76,7 @@ Lorsqu'une variable est déclarée, un espace en mémoire est reservé pour enre
 
 #### 1. Déclaration
 
-Pour déclarer un pointeur en C, on utilise le type de données que le pointeur désigne, suivi de l'opérateur `*`. Si le pointeur pointe vers un espace mémoire contenant une variable de type int, on parlera d'un "pointeur sur int" :
+Pour déclarer un pointeur en C, on utilise le type de données que le pointeur désigne, suivi de l'opérateur `*`. Par exemple, si le pointeur pointe vers un espace mémoire contenant une variable de type int, on parlera d'un "pointeur sur int" :
 ```C
 int *ptr; // déclaration d'un pointeur sur int qu'on appelle ptr
 ```
