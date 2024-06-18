@@ -1,11 +1,6 @@
 # Le Shell
 
-Le Shell est un environnement d'interprétation de commandes utilisé principalement dans les systèmes Unix et Unix-like (comme Linux et macOS). C'est l'interface entre l'utilisateur et le système d'exploitation, permettant d'exécuter des commandes, de lancer des programmes et d'automatiser des tâches via des scripts.
-
-Le Shell offre une interface en ligne de commande où les utilisateurs peuvent taper des commandes pour interagir avec le système d'exploitation. Cette interface est accessible via un terminal.
-
-Il est également possible d'écrired des scripts Shell pour automatiser des tâches répétitives. Ces scripts peuvent contenir des commandes, des boucles, des conditions et des fonctions.
-
+Le Shell est un programme d'interprétation de commandes qui est exécuté lorsqu'on ouvre un terminal. Il offre une interface textuelle permettant à l'utilisateur d'exécuter des commandes pour interagir avec le système d'exploitation, de lancer des programmes ou encore d'automatiser des tâches via des scripts. 
 
 
 ## Pour commencer
