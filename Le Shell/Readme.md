@@ -10,46 +10,44 @@ Il est également possible d'écrired des scripts Shell pour automatiser des tâ
 
 ## Pour commencer
 
-
-
 Il suffit d'ouvrir un terminal
 
-Faire le point sur la notion de répertoire, répertoire courant, fichier caché, etc
+
+## Petit glossaire
+
+### Arborescence
+
+### Chemin
+Relatif / absolu
+On entend par chemin absolu le chemin complet d'un emplacement à partir de la racine du système de fichiers. 
+
+### Répertoire
+Un répertoire n'est ni plus ni moins qu'un dossier.
 
 
+## Les principales commandes shell
 
-
-## Les principales commandes Shell
-
-
-Point général sur les commandes, les options, comment ça s'utilise et tout
-
+Les commandes shell sont des instructions textuelles utilisées pour interagir avec le système d'exploitation via un terminal ou une console. Chaque commande est généralement suivie d'options facultatives qui modifient son comportement, et éventuellement d'arguments qui précisent les données sur lesquelles la commande doit agir. Les commandes peuvent effectuer une variété de tâches telles que la navigation dans le système de fichiers, la manipulation de fichiers et de répertoires, le traitement de texte, la gestion des processus, etc. L'utilisation des commandes requiert une connaissance de la syntaxe spécifique à chaque commande ainsi que des options disponibles.
 
 ### I. Naviguer dans le système de fichiers
 
 #### 1. Lister les fichiers et dossiers
 
-La commande `ls` (pour *list*) permet de lister les fichiers et dossiers dans le répertoire courant. 
-
-L'option `-l` permet d'obtenir affichage détaillé (permissions, propriétaire, taille, date de modification).
-
-L'option `-a` permet d'afficher tous les fichiers, y compris les fichiers cachés (ceux dont le nom commence par un point).
-
-L'option `-R` permet un affichage récursif des sous-répertoires.
+La commande `ls` (pour *list*) permet de lister les fichiers et dossiers dans le répertoire courant. Voilà quelques options utiles pour cette commande : 
+* `-l` permet d'obtenir affichage détaillé (permissions, propriétaire, taille, date de modification).
+* `-a` permet d'afficher tous les fichiers, y compris les fichiers cachés (ceux dont le nom commence par un point).
+* `-R` permet un affichage récursif des sous-répertoires.
 
 #### 2. Naviguer entre les répertoires
 
-La commande `cd`(pour *change directory*) permet de changer de répertoire : `cd [répertoire]`.
-
-Il existe quelques raccourcis très pratiques :
-* `~` permet d'accéder au répertoire utilisateur (home) : `cd ~`
-* `..` permet d'accéder au répertoire parent : `cd ..`
-* `-` permet d'accéder au répertoire précédent : `cd -`
+La commande `cd`(pour *change directory*) permet de changer de répertoire : `cd [répertoire]`. Il existe quelques raccourcis très pratiques :
+* `~` permet d'accéder au répertoire utilisateur (home) : `cd ~`.
+* `..` permet d'accéder au répertoire parent : `cd ..`.
+* `-` permet d'accéder au répertoire précédent : `cd -`.
 
 #### 3. Afficher le chemin absolu du répertoire courant
 
 La commande `pwd` (pour *print working directory*) permet d'afficher le chemin absolu du répertoire dans lequel on se trouve.
-
 
 
 ### II. Manipuler les fichiers et répertoires
@@ -60,9 +58,7 @@ La commande `cp` (pour *copy*) permet de copier des fichiers ou des répertoires
 
 #### 2. Déplacer ou renommer des fichiers ou des répertoires
 
-La commande `mv` (pour *move*) permet de déplacer des fichiers ou des répertoires d'un emplacement à un autre : `mv [source] [destination]`.
-
-Il est aussi possible de déplacer plusieures sources à la fois : `mv [source1] [source2] [destination]`.
+La commande `mv` (pour *move*) permet de déplacer des fichiers ou des répertoires d'un emplacement à un autre : `mv [source] [destination]`. Il est aussi possible de déplacer plusieures sources à la fois : `mv [source1] [source2] [destination]`.
 
 Cette commande est également utilisée pour renommer un fichier ou un répertoire : `mv [ancien nom de fichier] [nouveau nom de fichier]`.
 
