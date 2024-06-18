@@ -1,6 +1,11 @@
 # Vim
 
-Vim est un **éditeur de texte** particulièrement apprécié pour sa puissance et sa flexibilité. Il est connu pour sa rapidité, sa capacité à gérer de très gros fichiers de manière efficace, et sa configuration hautement personnalisable.
+L'outil de base d'un développeur est l'éditeur de texte. Il en existe de très nombreux et sous toutes formes. De nos jours, il est très courant d'utiliser un **IDE** (pour environnement de développement intégré) comme **Visual Studio Code**. Cependant, les examens de la piscine sont réalisés sur des ordinateurs "rincés", sur lesquels tu ne retrouveras pas ton éditeur favori. Il est donc important de savoir utiliser les éditeurs installés par défaut sur les machines et je recommande de s'en tenir à ça pour la durée de la piscine. 
+
+Pour ma part, j'ai longtemps utilisé Vim, et c'est donc cet éditeur que je vais te présenter. Vim est un **éditeur de texte** particulièrement apprécié pour sa puissance et sa flexibilité. Il est connu pour sa rapidité, sa capacité à gérer de très gros fichiers de manière efficace, et sa configuration hautement personnalisable.
+
+on lance Vim tout simplement depuis un terminal en tapant `vim` suivit du nom de fichier que l'on veut éditer. Si le fichier n'existe pas encore, il sera créé. 
+
 
 ## Les modes
 
@@ -8,7 +13,20 @@ Vim est un **éditeur modal**, c'est à dire qu'il possède différents modes po
 
 ### 1. Le mode normal (commande)
 
-C'est le mode par défaut lorsque Vim est lancé. Il permet de copier des lignes ou de les déplacer grâce à des raccourcis, de mettre du texte en forme, ou de se déplacer dans le fichier.
+C'est le mode par défaut lorsque Vim est lancé. Il permet de copier des lignes ou de les déplacer grâce à des raccourcis, de mettre du texte en forme, ou de se déplacer dans le fichier. Voici quelques commandes de base qui peuvent être très utiles :
+
+* `y` pour copier le texte sélectionné
+* `yy` pour copier la ligne courante
+* `d` pour couper (copier + supprimer) le texte sélectionné
+* `dd` pour couper la ligne courante
+* `x` pour supprimer le caractère sous le curseur ou le texte sélectionné
+* `r` suivi d'un caractère de remplacement pour remplacer le caractère sous le curseur par le caractère de remplacement
+  
+* `u` pour annuler la dernière action
+* `ctrl + r` pour rétablir la dernière action annulée
+
+* `s` pour upprimer le texte sélectionné et passer en mode insertion
+* `S` pour supprimer la ligne courante et passer en mode insertion
 
 ### 2. Le mode insertion
 
@@ -43,25 +61,11 @@ On peut naviguer dans l'historique des commandes en utilisant les flèches du ha
 
 ## Personnalisation
 
-Personnalisable : Vim permet aux utilisateurs de configurer presque tous les aspects de leur expérience d'édition, en utilisant des fichiers de configuration appelés `.vimrc`.
+Vim offre la possibilité de configurer presque tous les aspects de leur expérience d'édition, en utilisant des fichiers de configuration appelés `.vimrc`. Il existe également des plugins comme **Sublivim** qui sont très simples à installer et qui améliorent beaucoup l'expérience. Cependant, les examens n'ont pas lieu sur nos sessions personnelles. On ne retrouve donc pas les plugins installés. Vim étant par défaut un peu brut de décoffrage, il est très pratique de savoir comment personnaliser l'éditeur via le fichier `.vimrc`. Voici quelques paramètrees incontournables :
 
+* `syntax on` pour activer la syntaxe en couleur
+* `set mouse=a` pour pouvoir cliquer dans le document et ne pas avoir à se déplacer avec les flèches
+* `set number`pour afficher les numéros de ligne
+* `set autoindent` pour activer l'indentation automatique
 
-
-
-
-
-Extensibilité : Il existe des milliers de plugins Vim disponibles pour ajouter des fonctionnalités supplémentaires, ce qui en fait un outil extrêmement flexible.
-
-Intégration avec le terminal : Vim s'intègre bien avec les terminaux et peut être utilisé de manière efficace sur des serveurs distants ou via des sessions SSH.
-
-Vim et la communauté : Vim possède une communauté active qui partage des astuces, des plugins et des configurations, contribuant ainsi à son évolution continue.
-
-Pourquoi utiliser Vim ?
-
-Productivité accrue : Une fois maîtrisé, Vim permet une édition rapide et efficace du texte, ce qui peut considérablement augmenter la productivité.
-
-Disponibilité : Vim est préinstallé sur la plupart des systèmes Unix/Linux, ce qui en fait un choix populaire pour les environnements de développement et d'administration système.
-
-Apprentissage progressif : Bien que Vim ait une courbe d'apprentissage initiale raide en raison de sa modalité et de ses nombreuses commandes, les utilisateurs constatent souvent une amélioration rapide de leur flux de travail une fois les bases maîtrisées.
-
-En résumé, Vim est un éditeur de texte puissant et très flexible, idéal pour ceux qui passent beaucoup de temps à manipuler du texte, écrire du code ou gérer des fichiers sur des systèmes Unix/Linux. Sa richesse en fonctionnalités et sa personnalisation en font un choix populaire parmi les développeurs expérimentés à la recherche d'un outil efficace et robuste pour leur travail quotidien.
+Pour ouvrir et édituer le fichier `.vimrc`, on tape dans un terminal `vim ~/.vimrc`. 
