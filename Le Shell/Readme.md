@@ -22,25 +22,33 @@ Faire le point sur la notion de répertoire, répertoire courant, fichier caché
 ## Les principales commandes Shell
 
 
+Point général sur les commandes, les options, comment ça s'utilise et tout
 
 
 ### I. Naviguer dans le système de fichiers
 
-#### 1. lister les fichiers et dossiers
+#### 1. Lister les fichiers et dossiers
 
-La commande `ls` permet de lister les fichiers et dossiers dans le répertoire (= dossier) courant.
+La commande `ls` (pour *list*) permet de lister les fichiers et dossiers dans le répertoire courant. 
 
-#### 2. cd
+L'option `-l` permet d'obtenir affichage détaillé (permissions, propriétaire, taille, date de modification).
 
-`cd [nom_du_répertoire]` permet de changer de répertoire.
+L'option `-a` permet d'afficher tous les fichiers, y compris les fichiers cachés (ceux dont le nom commence par un point).
 
-#### 3. pwd
+L'option `-R` permet un affichage récursif des sous-répertoires.
 
-`pwd` permet d'afficher le chemin du répertoire courant.
+#### 2. Naviguer entre les répertoires
 
+La commande `cd`(pour *change directory*) permet de changer de répertoire : `cd [répertoire]`.
 
+Il existe quelques raccourcis très pratiques :
+* `~` permet d'accéder au répertoire utilisateur (home) : `cd ~`
+* `..` permet d'accéder au répertoire parent : `cd ..`
+* `-` permet d'accéder au répertoire précédent : `cd -`
 
+#### 3. Afficher le chemin absolu du répertoire courant
 
+La commande `pwd` (pour *print working directory*) permet d'afficher le chemin absolu du répertoire dans lequel on se trouve.
 
 
 
@@ -48,19 +56,27 @@ La commande `ls` permet de lister les fichiers et dossiers dans le répertoire (
 
 #### 1. Copier des fichiers ou des répertoires
 
-La commande `cp` permet de copier des fichiers ou des répertoires d'un emplacement à un autre : `cp [source] [destination]`.
+La commande `cp` (pour *copy*) permet de copier des fichiers ou des répertoires d'un emplacement à un autre : `cp [source] [destination]`.
 
-#### 2. Déplacer des fichiers ou des répertoires
+#### 2. Déplacer ou renommer des fichiers ou des répertoires
 
-La commande `mv` permet de déplacer ou renommer des fichiers ou des répertoires d'un emplacement à un autre : `mv [source] [destination]`.
+La commande `mv` (pour *move*) permet de déplacer des fichiers ou des répertoires d'un emplacement à un autre : `mv [source] [destination]`.
+
+Il est aussi possible de déplacer plusieures sources à la fois : `mv [source1] [source2] [destination]`.
+
+Cette commande est également utilisée pour renommer un fichier ou un répertoire : `mv [ancien nom de fichier] [nouveau nom de fichier]`.
 
 #### 3. Supprimer un fichier ou un répertoire
 
-La commande `rm` permet de supprimer le ou les fichiers spécifiés : `rm [nom_du_fichier]`. Il est possible de supprimer plusieurs fichiers à la fois : `rm [nom_du_fichier1] [nom_du_fichier2] [nom_du_fichier3]`.
+La commande `rm` (pour *remove*) permet de supprimer un fichier spécifié : `rm [fichier]`. Il est également possible de supprimer plusieurs fichiers à la fois : `rm [fichier1] [fichier2] [fichier3]`.
+
+Pour supprimer un répertoire vide, il faut utiliser l'option `-d` (pour *directory*). Sinon, on peut supprimer un répertoire non vide grâce à l'option `-r` (pour *recursive*) : `rm -r [répertoire]`. 
+
+Il convient d'être prudent avec cette commande, les erreurs arrivent vite et peuvent être fatales. L'option `-i` permet d'ajouter une confirmation avant de supprimer chaque fichier spécifié. 
 
 #### 4. Créer un répertoire
 
-La commande `mkdir` permet de créer un nouveau répertoire et s'utilise de cette façon : `mkdir [nom_du_répertoire]`.
+La commande `mkdir` (pour *make directory*) permet de créer un nouveau répertoire et s'utilise de cette façon : `mkdir [répertoire]`.
 
 
 ### III. Affichage
@@ -71,23 +87,34 @@ La commande `echo` permet d'afficher un message dans la console : `echo "Hello, 
 
 #### 2. Afficher le contenu d'un fichier
 
-La commande `cat` permet d'afficher dans la console le contenu d'un fichier spécifié : `cat [nom_du_fichier]`.
+La commande `cat` permet d'afficher dans la console le contenu d'un fichier spécifié : `cat [fichier]`.
 
 #### 3. Afficher les premières lignes d'un fichier
 
-La commande `head` permet d'afficher dans la console les 10 premières lignes d'un fichier spécifié : `head nom_du_fichier`. Il est possible de modifier le nombre de ligne à afficher avec l'option `-n`: `head -n 20 nom_du_fichier`. Dans ce dernier exemple, on affichera les 20 premières lignes du fichier. 
+La commande `head` permet d'afficher dans la console les 10 premières lignes d'un fichier spécifié : `head [fichier]`. Il est possible de modifier le nombre de lignes à afficher avec l'option `-n`: `head -n 20 [fichier]`. Dans ce dernier exemple, on affichera les 20 premières lignes du fichier. 
 
 #### 4. Afficher les denières lignes d'un fichier
 
-La commande `tail` permet d'afficher dans la console les 10 denières lignes d'un fichier spécifié : `tail nom_du_fichier`. Il est possible de modifier le nombre de ligne à afficher avec l'option `-n`: `tail -n 20 nom_du_fichier`. Dans ce dernier exemple, on affichera les 20 denières lignes du fichier. 
+La commande `tail` permet d'afficher dans la console les 10 denières lignes d'un fichier spécifié : `tail [fichier]`. Il est possible de modifier le nombre de lignes à afficher avec l'option `-n`: `tail -n 20 [fichier]`. Dans ce dernier exemple, on affichera les 20 denières lignes du fichier. 
 
 
 
 
 ### IV. Redirections
 
-* `[command] > [fichier]` permet de rediriger la sortie d'une commande vers un fichier.
-* `[command] >> [fichier]` permet d'ajouter la sortie d'une commande à la fin d'un fichier.
+#### 1. Rediriger la sortie d'une commande vers un fichier
+
+Le symbole `>` permet de rediriger la sortie d'une commande vers un fichier : `[command] > [fichier]`.
+
+#### 2. Ajouter la sortie d'une commande à la fin d'un fichier
+
+Le symbole `>>` permet d'ajouter la sortie d'une commande à la fin d'un fichier : `[command] >> [fichier]`.
+
+#### 3. Rediriger la sortie d'une commande vers l'entrée d'une autre commande
+
+Il est possible de chaîner des commandes grâce au symbole `|`(appelé *pipe*), permettant ainsi d'utiliser la sortie d'une commande comme entrée d'une autre commande : `[command1] | [command2]`.
+
+Concrètement, s
 * `[command1] | [command2]` permet d'utiliser la sortie de command1 comme entrée pour command2.
 
 
