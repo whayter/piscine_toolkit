@@ -4,7 +4,7 @@ Vim est un **éditeur de texte** particulièrement apprécié pour sa puissance 
 
 ## Les modes
 
-Vim est un **éditeur modal**, c'est à dire qu'il possède différents modes pour réliser des tâches variées. Il y a trois modes de base : le mode normal ou mode commande (dans lequel on est lorsque Vim démarre), le mode insertion, et le mode ligne de commande.
+Vim est un **éditeur modal**, c'est à dire qu'il possède différents modes pour réaliser des tâches variées. Il y a trois modes de base : le mode normal ou mode commande (par défaut lorsque Vim démarre), le mode insertion, et le mode ligne de commande.
 
 ### 1. Le mode normal (commande)
 
@@ -12,31 +12,29 @@ C'est le mode par défaut lorsque Vim est lancé. Il permet de copier des lignes
 
 ### 2. Le mode insertion
 
-Le mode insertion permet d'entrer et de modifier du texte dans un document. Contrairement au mode normal, où les touches ont des fonctions spécifiques de navigation et de commande, le mode insertion ressemble davantage à l'expérience d'édition de la plupart des autres éditeurs de texte.
-
-Pour passer du mode normal au mode insertion, on utilise la touche `i` (pour insérer). Les touches du clavier agissent alors comme dans n'importe quel autre éditeur de texte. On peut taper du texte, supprimer des caractères, et utiliser les flèches pour déplacer le curseur.
+Le mode insertion permet tout simplement d'entrer et de modifier du texte dans un document. Pour passer du mode normal au mode insertion, on utilise la touche `i` (pour insérer). Les flèches servent à déplacer le curseur dans le document.
 
 Pour quitter le mode insertion, on appuie sur la touche `esc`. 
 
 ### 3. Le mode ligne de commande
 
-Pour accéder au mode ligne de commande dans Vim, on part du mode normal et on appuie sur la touche `:`. Un curseur apparaît alors en bas de l'écran, à gauche, où on peut taper nos commandes.
+Pour accéder au mode ligne de commande dans Vim, on part du mode normal et on appuie sur la touche `:`. Un curseur apparaît alors en bas à gauche de l'écran : c'est là qu'on tape notre copmmande.
 
 #### Sauvegarde et chargement de fichiers
 
-Taper `:w` et appuyer sur `Enter`.
-Pour enregistrer le ficheir sous un autre nom, taper `:w nom_du_fichier` et appuyer sur `Enter`.
+Pour sauvegarder les modifications apporées à un fichier, on tape `:w` puis `Enter`. Il est également possible de modifier le nom du fichier lors de l'enregistrement. Il suffit de taper `:w nom_du_fichier` et d'appuyer sur `Enter`.
 
 #### Recherche et remplacement
 
 Pour rechercher du texte dans le fichier, on utilise la commande  `:/mot_a_rechercher`.
-Pour remplacer du texte dans le fichier, on utilise la commande `:%s/mot_a_remplacer/nouveau_mot/g`.
+
+Pour remplacer du texte dans le fichier, on utilise la commande `:%s/mot_a_remplacer/nouveau_mot/g`. Ici, `/g` (pour global) permet de changer toutes les occurences de `mot_a_remplacer`. Si on ne souhaite modifier que la première occurence, on ne rajoute pas `/g` en fin de commande. 
 
 #### Autres commandes utiles
 
-Pour quitter Vim, on tape `:q`. Si des modifications ont été apportées au fichier et qu'on ne veut pas les conserver, on tape `:q!` pour forcer la sortie.
+Pour quitter l'édireur de texte, on tape `:q`. Si des modifications ont été apportées au fichier et qu'on ne veut pas les conserver, on tape `:q!` pour forcer la sortie.
 
-Pour sauvegarder et quitter on tape `:wq` ou `:x`.
+Il est possible de sauvegarder et quitter dans une même commande. Pour ce faire, on tape `:wq` ou `:x`, puis `Enter`.
 
 #### Historique des commandes
 
