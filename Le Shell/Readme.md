@@ -49,7 +49,6 @@ La commande `cd`(pour *change directory*) permet de changer de répertoire : `cd
 
 La commande `pwd` (pour *print working directory*) permet d'afficher le chemin absolu du répertoire dans lequel on se trouve.
 
-
 ### II. Manipuler les fichiers et répertoires
 
 #### 1. Copier des fichiers ou des répertoires
@@ -74,25 +73,27 @@ Il convient d'être prudent avec cette commande, les erreurs arrivent vite et pe
 
 La commande `mkdir` (pour *make directory*) permet de créer un nouveau répertoire et s'utilise de cette façon : `mkdir [répertoire]`.
 
+#### 5. Afficher le contenu d'un fichier
 
-### III. Affichage
+La commande `cat` permet d'afficher dans la console le contenu d'un fichier spécifié : `cat [fichier]`. Il est possible d'afficher plusieurs fichiers à la suite en renseignant plusieurs noms de fichiers.
 
-#### 1. Afficher un message
-
-La commande `echo` permet d'afficher un message dans la console : `echo "Hello, world!"`.
-
-#### 2. Afficher le contenu d'un fichier
-
-La commande `cat` permet d'afficher dans la console le contenu d'un fichier spécifié : `cat [fichier]`.
-
-#### 3. Afficher les premières lignes d'un fichier
+#### 6. Afficher les premières lignes d'un fichier
 
 La commande `head` permet d'afficher dans la console les 10 premières lignes d'un fichier spécifié : `head [fichier]`. Il est possible de modifier le nombre de lignes à afficher avec l'option `-n`: `head -n 20 [fichier]`. Dans ce dernier exemple, on affichera les 20 premières lignes du fichier. 
 
-#### 4. Afficher les denières lignes d'un fichier
+#### 7. Afficher les denières lignes d'un fichier
 
 La commande `tail` permet d'afficher dans la console les 10 denières lignes d'un fichier spécifié : `tail [fichier]`. Il est possible de modifier le nombre de lignes à afficher avec l'option `-n`: `tail -n 20 [fichier]`. Dans ce dernier exemple, on affichera les 20 denières lignes du fichier. 
 
+
+
+
+
+
+
+QUELLE CAT2GORIE ?
+#### 5. Afficher un message
+La commande `echo` permet d'afficher un message dans la console : `echo "Hello, world!"`.
 
 
 
