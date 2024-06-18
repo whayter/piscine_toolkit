@@ -10,14 +10,9 @@ Il suffit d'ouvrir un terminal
 
 ## Petit glossaire
 
-### Arborescence
-
-### Chemin
-Relatif / absolu
-On entend par chemin absolu le chemin complet d'un emplacement à partir de la racine du système de fichiers. 
-
-### Répertoire
-Un répertoire n'est ni plus ni moins qu'un dossier.
+* **Arborescence** :
+* **Chemin** : Relatif / absolu ; On entend par chemin absolu le chemin complet d'un emplacement à partir de la racine du système de fichiers. 
+* **Répertoire** : Un répertoire n'est ni plus ni moins qu'un dossier.
 
 
 ## Les principales commandes shell
