@@ -1,8 +1,6 @@
 # Git
 
-Git est un outil qui permet de garder une trace des différentes versions d'un projet informatique. Ainsi toutes les modifications apportées dans un projet sont enregistrées et il est donc possible de revenir en arrière si nécessaire.
-
-Dans le cadre d'un travail collaboratif, Git permet aussi à chacun de voir ce que les autres ont fait et de combiner leurs changements de manière ordonnée.
+Git est un outil qui permet de garder une trace des différentes versions d'un projet informatique. Ainsi toutes les modifications apportées dans un projet sont enregistrées et il est donc possible de revenir en arrière si nécessaire. Dans le cadre d'un travail collaboratif, Git permet à chacun de voir ce que les autres ont fait et de combiner leurs changements de manière ordonnée.
 
 
 
