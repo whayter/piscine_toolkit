@@ -3,6 +3,17 @@
 Git est un outil qui permet de garder une trace des différentes versions d'un projet informatique. Ainsi toutes les modifications apportées dans un projet sont enregistrées et il est donc possible de revenir en arrière si nécessaire. Dans le cadre d'un travail collaboratif, Git permet à chacun de voir ce que les autres ont fait et de combiner leurs changements de manière ordonnée.
 
 
+## Rapide tour d'horizon
+
+Avant toute chose, il est important de bien saisir certaines notions fondamentales :
+
+### 1. La notion de dépôt
+Un dépôt Git est un espace de stockage qui contient tous les fichiers, dossiers, et l'historique complet de toutes les modifications apportées à un projet. Il permet de suivre les évolutions du projet au fil du temps, de gérer les versions, et de collaborer avec d'autres développeurs. Le dépôt peut être local, c'est-à-dire sur sa propre machine, ou distant, hébergé sur un serveur pour faciliter le partage et la collaboration.
+
+### 2. La notion de branche
+Une branche dans Git est une version parallèle du projet, permettant de développer des fonctionnalités, corriger des bugs ou tester des idées sans affecter la branche principale (généralement appelée master ou main). Chaque branche peut avoir son propre historique de commits et être fusionnée avec d'autres branches pour intégrer les modifications. Les branches facilitent le travail collaboratif et la gestion des différentes versions d'un projet.
+
+
 ## Créer un dépôt Git
 
 Pour commencer à travailler avec Git, il faud déjà avoir un dépôt local. Pour ce faire, deux solutions : 
