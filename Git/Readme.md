@@ -5,7 +5,7 @@ Git est un outil qui permet de garder une trace des différentes versions d'un p
 
 ## Rapide tour d'horizon
 
-Avant toute chose, il est important de bien saisir certaines notions fondamentales :
+Il est important de bien saisir certaines notions fondamentales pour aborder sereinement Git.
 
 ### 1. La notion de dépôt
 Un dépôt Git est un espace de stockage qui contient tous les fichiers, dossiers, et l'historique complet de toutes les modifications apportées à un projet. Il permet de suivre les évolutions du projet au fil du temps, de gérer les versions, et de collaborer avec d'autres développeurs. Le dépôt peut être local, c'est-à-dire sur sa propre machine, ou distant, hébergé sur un serveur pour faciliter le partage et la collaboration.
