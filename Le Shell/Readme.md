@@ -137,3 +137,5 @@ Une fois le script créé, il faut modifier les droits pour le rendre exécutabl
 
 On exécute ensuite le script de cette façon : `./mon_script.sh`. Si le script attend des paramètres, `./mon_script.sh [paramètre1] [paramètre2]`
 
+Les commentaires dans un script shell sont préfixé du symbole `#`
+
