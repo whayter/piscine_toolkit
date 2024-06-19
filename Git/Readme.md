@@ -5,15 +5,18 @@ Git est un outil qui permet de garder une trace des différentes versions d'un p
 
 ## Les principales commandes
 
+Tout d'abord, voilà deux commandes pour commencer à travailler avec Git :
 * `git init` : cette commande est utilisée pour initialiser un nouveau dépôt Git dans un répertoire
 * `git clone` : cette commande est utilisée pour créer une copie locale d'un dépôt Git distant
+
+Une fois qu'on a un dépôt local, on peut commencer à travailler. Les commandes suivantes permettent d'enregistrer les modifications apportées sur le dépôt local vers le dépôt distant :
 * `git add [fichier]` : cette commande indique à git quels fichiers doivent être inclus dans le prochain commit
 * `git commit -m [message]` : permet d'enregistrer les modifications apportées en créant un snapshot. Il est important de renseigner un message explicite pour s'y retrouver plus facilement entre les commits
 * `git push` : permet d'envoyer les modifications commitées vers le dépôt distant
+  
 * `git log` : sert à afficher l'historique des commmits
 * `git diff [hash1] [hash2]` : permet d'afficher les différences entre deux versions
 * `git fetch`
-* `git clone`
 * `git pull`
 * `git branch`
 * `git checkout`
