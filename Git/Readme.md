@@ -60,3 +60,16 @@ git push origin master  # envoi des modifications vers la branche master du dép
 * `git branch`
 * `git checkout`
 * `git merge`
+
+
+## Travailler avec les branches dans Git
+
+Les branches sont une fonctionnalité clé de Git, permettant de travailler sur différentes versions d'un projet simultanément. 
+
+### 1. Créer une nouvelle branche :
+
+### 2. Basculer entre les branches :
+
+### 3. Fusionner les branches :
+
+### 4. Supprimer une branche :
