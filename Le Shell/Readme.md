@@ -1,6 +1,6 @@
 # Le Shell
 
-Le Shell est un programme d'interprétation de commandes qui est exécuté lorsqu'on ouvre un terminal. Il offre une interface textuelle permettant à l'utilisateur d'exécuter des commandes pour interagir avec le système d'exploitation, de lancer des programmes ou encore d'automatiser des tâches via des scripts. 
+Le Shell est un programme d'interprétation de commandes qui tourne dans un terminal. Il offre une interface textuelle permettant à l'utilisateur d'exécuter des commandes pour interagir avec le système d'exploitation, de lancer des programmes ou encore d'automatiser des tâches via des scripts. 
 
 
 ## Pour commencer
