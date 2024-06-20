@@ -47,19 +47,28 @@ git commit -m "Description des modifications"
 La commande `git status` affiche l'état actuel du répertoire de travail et de la zone de staging. Elle indique les fichiers modifiés, ajoutés, ou supprimés, ainsi que ceux qui sont prêts à être committés.
 
 ### 4. Consulter l'historique des commits :
-La commande `git log` affiche l'historique des commits du dépôt. Cette commande montre les messages de commit, les auteurs, et les dates des changements.
+La commande `git log` affiche l'historique des commits du dépôt. Cette commande montre les messages de commit, les auteurs, et les dates des changements. À noter : cette commande donne également pour chaque commmit son identifiant unique, appelé **hash**.
 
 ### 5. Pousser les modifications vers le dépôt distant :
 Une fois les modifications committées, on peut les envoyer vers le dépôt distant avec la commande `git push`. Cette commande synchronise le dépôt local avec le dépôt distant, permettant ainsi à d'autres collaborateurs de voir nos changements.
 ```bash
 git push origin master  # envoi des modifications vers la branche master du dépôt distant
 ```
-* `git diff [hash1] [hash2]` : permet d'afficher les différences entre deux versions
-* `git fetch`
-* `git pull`
 
-* `git merge`
-
+### 6. Comparer des fichiers modifiés ou des commits
+La commande `git diff` permet de comparer les fichiers modifiés avec la dernière version committée. Il est également possible de spécifier un fichier à comparer :
+```bash
+git diff            # comparaison de tous les fichiers modifiés avec leur dernière version committée
+git diff [fichier]  # comparaison du fichier modifié avec sa dernière version committée
+```
+Il est aussi possible de comparer les fichiers qui ont déjà été ajoutés à la zone de staging avec l'option `--staged` :
+```bash
+git diff --staged
+```
+Enfin, on peut comparer des commits entre eux, en rensignant leurs **hash** :
+```bash
+git diff [hash du commit 1] [hash du commit 2]
+```
 
 ## Travailler avec les branches dans Git
 
@@ -72,7 +81,7 @@ git branch [nouvelle branche]
 ```
 
 ### 2. Basculer entre les branches :
-La commande `git checkout` permet de changer de branche. Cela met à jour le répertoire de travail avec les fichiers de la branche sélectionnée. Cette commande sert également à revenir à un certain commit. On renseigne alors le **hash** du commit vers lequel on veut aller. Le hash est un identifiant unique associé à chaque commit. On peut le trouver avec la commande `git log`.
+La commande `git checkout` permet de changer de branche. Cela met à jour le répertoire de travail avec les fichiers de la branche sélectionnée. Cette commande sert également à revenir à un certain commit. On renseigne alors le **hash** du commit vers lequel on veut aller.
 ```bash
 git checkout [nouvelle branche]
 git checkout [hash d'un commit]
@@ -89,4 +98,10 @@ git merge [nouvelle branche]
 Après avoir fusionné les modifications, on peut supprimer une branche avec la commande `git branch -d` :
 ```bash
 git branch -d nouvelle-branche
+```
+
+### 5. Comparer des branches entre elles : 
+Nous avons déjà parlé de la commande `git diff` pour comparer des fichiers ou des commits. Cette commande permet également de comparer des branches entre elles : 
+```bash
+git diff [branche 1] [branche 2]
 ```
