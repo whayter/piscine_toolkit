@@ -57,8 +57,7 @@ git push origin master  # envoi des modifications vers la branche master du dép
 * `git diff [hash1] [hash2]` : permet d'afficher les différences entre deux versions
 * `git fetch`
 * `git pull`
-* `git branch`
-* `git checkout`
+
 * `git merge`
 
 
@@ -67,9 +66,27 @@ git push origin master  # envoi des modifications vers la branche master du dép
 Les branches sont une fonctionnalité clé de Git, permettant de travailler sur différentes versions d'un projet simultanément. 
 
 ### 1. Créer une nouvelle branche :
+La commande `git branch` sert à créer une nouvelle branche. Cela permet de développer des fonctionnalités ou de tester des idées sans affecter la branche principale.
+```bash
+git branch [nouvelle branche]
+```
 
 ### 2. Basculer entre les branches :
+La commande `git checkout` permet de changer de branche. Cela met à jour le répertoire de travail avec les fichiers de la branche sélectionnée. Cette commande sert également à revenir à un certain commit. On renseigne alors le **hash** du commit vers lequel on veut aller. Le hash est un identifiant unique associé à chaque commit. On peut le trouver avec la commande `git log`.
+```bash
+git checkout [nouvelle branche]
+git checkout [hash d'un commit]
+```
 
 ### 3. Fusionner les branches :
+La commande `git merge` permet de fusionner les modifications d'une branche dans une autre, intégrant ainsi les nouvelles fonctionnalités ou corrections.
+```bash
+git checkout master  # on revient sur la branche principale sur laquel on veut intégrer les modifications
+git merge [nouvelle branche]
+```
 
 ### 4. Supprimer une branche :
+Après avoir fusionné les modifications, on peut supprimer une branche avec la commande `git branch -d` :
+```bash
+git branch -d nouvelle-branche
+```
