@@ -70,6 +70,12 @@ Enfin, on peut comparer des commits entre eux, en rensignant leurs **hash** :
 git diff [hash du commit 1] [hash du commit 2]
 ```
 
+### 7. Naviguer entre les commits
+La commande `git checkout` permet de passer d'un commit à un autre. Cela met à jour le répertoire de travail avec les fichiers du commit sélectionné :
+```bash
+git checkout [hash du commit]
+```
+
 ## Travailler avec les branches dans Git
 
 Les branches sont une fonctionnalité clé de Git, permettant de travailler sur différentes versions d'un projet simultanément. 
@@ -84,7 +90,7 @@ git branch [nouvelle branche]
 La commande `git checkout` permet de changer de branche. Cela met à jour le répertoire de travail avec les fichiers de la branche sélectionnée. Cette commande sert également à revenir à un certain commit. On renseigne alors le **hash** du commit vers lequel on veut aller.
 ```bash
 git checkout [nouvelle branche]
-git checkout [hash d'un commit]
+git checkout [hash du commit]
 ```
 
 ### 3. Fusionner les branches :
