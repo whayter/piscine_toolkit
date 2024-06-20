@@ -3,18 +3,6 @@
 Le Shell est un programme d'interprétation de commandes qui tourne dans un terminal. Il offre une interface textuelle permettant à l'utilisateur d'exécuter des commandes pour interagir avec le système d'exploitation, de lancer des programmes ou encore d'automatiser des tâches via des scripts. 
 
 
-## Pour commencer
-
-Il suffit d'ouvrir un terminal
-
-
-## Petit glossaire
-
-* **Arborescence** :
-* **Chemin** : Relatif / absolu ; On entend par chemin absolu le chemin complet d'un emplacement à partir de la racine du système de fichiers. 
-* **Répertoire** : Un répertoire n'est ni plus ni moins qu'un dossier.
-
-
 ## Les principales commandes shell
 
 Les commandes shell sont des instructions textuelles utilisées pour interagir avec le système d'exploitation via un terminal ou une console. Chaque commande est généralement suivie d'options facultatives qui modifient son comportement, et éventuellement d'arguments qui précisent les données sur lesquelles la commande doit agir. Les commandes peuvent effectuer une variété de tâches telles que la navigation dans le système de fichiers, la manipulation de fichiers et de répertoires, le traitement de texte, la gestion des processus, etc. L'utilisation des commandes requiert une connaissance de la syntaxe spécifique à chaque commande ainsi que des options disponibles.
@@ -105,8 +93,6 @@ find /home -name "fichier.txt"   # recherche du fichier "fichier.txt" dans le r�
 find /home -type d -name "tuto"  # recherche d'un dossier "tuto" dans le répertoire /home
 ```
 
-#### 3. Rechercher un pattern
-La commande `grep` permet de rechercher un pattern dans un fichier. 
 
 ### VI. Documentation
 
