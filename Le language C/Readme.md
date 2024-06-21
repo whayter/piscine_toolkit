@@ -102,7 +102,7 @@ int numbers[3] = {1, 2, 3};
 int *ptr = numbers; // pas besoin de l'opérateur d'adresse ici, puisque numbers est considéré commme un pointeur vers le premier élément du tableau
 ```
 
-Si on déréférence ptr, on obtiendra donc la valeur du premier élément de notre tableau, c'est à dire 1 :
+Si on déréférence `ptr`, on obtiendra donc la valeur du premier élément de notre tableau, c'est à dire 1 :
 ```C
 int firstValue = *ptr // firstValue vaudra alors 1
 ```
@@ -140,7 +140,7 @@ Voici un tableau illustrant la façon dont tout ça est enregistré en mémoire 
 
 La variable `number` contient `42` et est enregistrée à l'adresse `0x00`. La variable `ptr1` est enregistrée à l'adresse `0x01` et contient l'adresse de la variable `number`, c'est à dire `0x00`. La variable `ptr2` est enregistrée à l'adresse `0x02`, et contient l'adresse de `ptr1`, c'est à dire `0x01`.
 
-Si on déréférence `ptr2`, on obtient `ptr1`. Si on déréférence deux fois ptr2, on obtiendra `number` :
+Si on déréférence `ptr2`, on obtient `ptr1`. Si on déréférence deux fois `ptr2`, on obtiendra `number` :
 ```C
 int value = **ptr2; // value vaudra 42
 ```
