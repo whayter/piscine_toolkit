@@ -145,6 +145,61 @@ Si on déréférence `ptr2`, on obtient `ptr1`. Si on déréférence deux fois `
 int value = **ptr2; // value vaudra 42
 ```
 
+## Les conditions
+
+Les conditions en C permettent de contrôler le flux d'exécution du programme en fonction de l'évaluation d'expressions booléennes (vrai ou faux). La structure conditionnelle la plus couramment utilisée est `if`, qui exécute un bloc de code si une condition donnée est vraie. Il est souvent accompagné de `else` pour spécifier un bloc de code alternatif à exécuter si la condition est fausse. Une autre variante, `else if`, permet de vérifier plusieurs conditions en séquence.
+
+```C
+int number = 0;
+
+if (number < 0)
+{
+    printf("number est négatif);
+}
+else if (number > 42)
+{
+    printf("number est positif);
+}
+else
+{
+    printf("number vaut 0");
+}
+```
+
+## Les opérateurs
+
+### 1. Les opérateurs arithmétiques :
+On utilise en C les opérateurs arithmétiques classiques (`+`, `-`, `*`, `/`) auxquelles il faut ajouter le *modulo* (`%`) qui sert à calculer le reste d'une division
+
+### 2. Les opérateurs de comparaison :
+On utilise en C les opérateurs de comparaison classiques (`<`, `<=`, `>`, `>=`). Pour vérifier une égalité, on utilise l'opétateur `==`, à ne pas confondre avec `=`qui sert à assigner une valeur. On utilise aussi `!=` pour vérifier une inégalité.
+
+### 3. Les opérateurs logiques :
+* `&&` : l'opérateur ET
+* `||` : l'opérateur OU
+* `!` : l'opérateur de négation
+
+### 4. Les opérateurs d'affectation :
+Outre le traditionnel `=` pour affecter, on utilise aussi les opérateurs `+=` et `-=` qui s'utilisent de cette façon :
+```C
+int a = 10;
+a -= 2;        // cette instruction peut aussi s'écrire "a = a - 2;". a vaut maintenant 8
+a += 5;        // cette instruction peut aussi s'écrire "a = a + 5;". a vaut maintenant 13
+```
+
+### 5. Les opérateurs d'incrémentation et de décrémentation :
+On utilise les opérateurs `++` et `--` pour incrémenter ou décrémenter une valeur.
+```C
+int a = 10;
+a++; // a vaut maintenant 11
+a--; // a vaut à nouveau 10
+```
+Ces opérateurs peuvent aussi être placé devant la variabe, en mode préfixe. Voilà en exemple l'impact que ça peut avoir :
+```C
+int a = 10;
+int result1 = a++; // result1 prend la valeur de a puis est incrémenté
+int result2 = ++a; // a est incrémenté puis result2 prend la valeur de a
+```
 
 ## Les fonctions
 
@@ -185,12 +240,11 @@ void printMessage()
 ```
 Ici, le mot clé `void` signigie que la fonction ne retourne aucune valeur. L'appel à cette fonction est fait de cette façon : `printMessage();`
 
-### La focntion *main*
+### La fonction *main*
 
-En C, la fonction main est le point d'entrée de tout programme. Elle est la première à être exécutée et doit systématiquement être présente. Essentielle, elle dirige l'exécution globale. La fonction *main* peut être déclarée de plusieurs façons, mais les deux formes les plus courantes sont les suivantes :
+En C, la fonction *main* est le point d'entrée de tout programme. Elle est la première à être exécutée et doit systématiquement être présente. Essentielle, elle dirige l'exécution globale. La fonction *main* peut être déclarée de plusieurs façons, mais les deux formes les plus courantes sont les suivantes :
 
 1. sans arguments :
-
 ```C
 int main(void)
 {
@@ -200,7 +254,6 @@ int main(void)
 ```
 
 2. avec arguments :
-
 ```C
 int main(int argc, char *argv[])
 {
@@ -208,8 +261,10 @@ int main(int argc, char *argv[])
     return (0);
 }
 ```
+Dans ce deuxième cas, l'argument `argv` est un tableau de pointeur sur char, c'est à dire un tableau de chaînes de caractères. L'arguement `argc` donne la taille de `argv`. De cette façon, on peut donner un nombre variable d'arguments à l'execution de notre programme. 
 
-La fonction *main* retourne généralement un entier. Le type de retour int indique le code de sortie du programme. Par convention, un retour de 0 signifie que le programme s'est terminé avec succès.
+
+Dans tous les cas, la fonction *main* retourne un entier. Le type de retour int indique le code de sortie du programme. Par convention, un retour de 0 signifie que le programme s'est terminé avec succès.
 
 
 ### Les appels systèmes / les librairies
