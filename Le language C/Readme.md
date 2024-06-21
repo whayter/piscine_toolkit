@@ -145,26 +145,6 @@ Si on déréférence `ptr2`, on obtient `ptr1`. Si on déréférence deux fois `
 int value = **ptr2; // value vaudra 42
 ```
 
-## Les conditions
-
-Les conditions en C permettent de contrôler le flux d'exécution du programme en fonction de l'évaluation d'expressions booléennes (vrai ou faux). La structure conditionnelle la plus couramment utilisée est `if`, qui exécute un bloc de code si une condition donnée est vraie. Il est souvent accompagné de `else` pour spécifier un bloc de code alternatif à exécuter si la condition est fausse. Une autre variante, `else if`, permet de vérifier plusieurs conditions en séquence.
-
-```C
-int number = 0;
-
-if (number < 0)
-{
-    printf("number est négatif);
-}
-else if (number > 42)
-{
-    printf("number est positif);
-}
-else
-{
-    printf("number vaut 0");
-}
-```
 
 ## Les opérateurs
 
@@ -200,6 +180,30 @@ int a = 10;
 int result1 = a++; // result1 prend la valeur de a puis est incrémenté
 int result2 = ++a; // a est incrémenté puis result2 prend la valeur de a
 ```
+
+
+## Les conditions
+
+Les conditions en C permettent de contrôler le flux d'exécution du programme en fonction de l'évaluation d'expressions booléennes (vrai ou faux). La structure conditionnelle la plus couramment utilisée est `if`, qui exécute un bloc de code si une condition donnée est vraie. Il est souvent accompagné de `else` pour spécifier un bloc de code alternatif à exécuter si la condition est fausse. Une autre variante, `else if`, permet de vérifier plusieurs conditions en séquence.
+
+```C
+int number = 0;
+
+if (number < 0)
+{
+    printf("number est négatif);
+}
+else if (number > 42)
+{
+    printf("number est positif);
+}
+else
+{
+    printf("number vaut 0");
+}
+```
+
+
 
 ## Les fonctions
 
