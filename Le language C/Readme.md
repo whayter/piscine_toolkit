@@ -2,16 +2,15 @@
 
 Le C est un langage de programmation créé dans les années 1970, connu pour sa performance et sa flexibilité. En tant que langage de bas niveau, il se situe près du matériel informatique, permettant un contrôle précis des ressources matérielles comme la mémoire et le processeur. Cela le rend idéal pour développer des systèmes d'exploitation, des logiciels et des applications embarquées. Sa simplicité et sa puissance en font un langage incontournable en informatique.
 
-
 Le langage C est un langage de programmation compilé, ce qui signifie que le code source écrit par le programmeur doit être transformé en un code machine exécutable par l'ordinateur avant de pouvoir être exécuté. Ce processus de transformation est appelé compilation.
 
 
-## Les instructions
+## I. Les instructions
 
 Un programme informatique est constitué d'une série d'instructions, c'est-à-dire de commandes données à l'ordinateur pour qu'il effectue des tâches spécifiques. En C, chaque instruction se termine par un point-virgule : `int number = 10;`
 
 
-## Les commentaires
+## II. Les commentaires
 
 Dans un programme informatique, les commentaires apportent de très précieuses informations pour ceux qui sont amenées à manipuler le code. Les commentaires sont ignorés lors de l'éxecution du programme. Il existe plusieurs façons de commenter en C, mais concentrons nous sur la méthode la plus simple : les commentaires sur une seule ligne. Pour cela, on utilise le symbole `//` suivi du commentaire :
 ```C
@@ -19,8 +18,7 @@ Dans un programme informatique, les commentaires apportent de très précieuses 
 int age = 42; // ceci est un commenntaire en fin d'instruction
 ```
 
-
-## Les variables et les types de données
+## III. Les variables et les types de données
 
 Les variables sont des conteneurs utilisés pour stocker des valeurs. En C, chaque variable doit être **déclarée** avec un **type** spécifique avant de pouvoir être utilisée. Une fois déclarée, une variable peut être **initialisée**, c'est-à-dire qu'on lui attribue une valeur. Il est possible de déclarer et d'initialiser une variable dans une même instruction.
 ```C
@@ -29,7 +27,7 @@ age = 42; // initialisation de la variable age
 int number = 7; // déclaration et initialisation d'une variable dans une même instruction
 ```
 
-### I. Les types de données de base
+### A. Les types de données de base
 
 Dans le langage C, les variables peuvent stocker différents types de données, tels que des nombres entiers, des nombres à virgule flottante et des caractères. Ces types de données de base déterminent la nature et la taille des valeurs que les variables peuvent contenir. Ils sont essentiels pour décrire et manipuler les informations dans un programme. Voici quelques-uns des types de données de base les plus couramment utilisés :
 
@@ -38,19 +36,17 @@ Dans le langage C, les variables peuvent stocker différents types de données, 
 * les double servent à enregistrer des nombres décimaux avec une plus grand précision qu'un float : `double pi = 3.1415926535;`
 * les char servent à enregistrer des caractères individuels : `char letter = 'A';`
 
-###  II. Les tableaux
+###  B. Les tableaux
 
 Les tableaux sont des collections de variables du même type qui sont stockées en mémoire de manière contigüe et sous un même nom. Ils sont particulièrement utiles pour travailler avec des séries de valeurs ou des collections de données, facilitant ainsi les opérations répétitives et les manipulations de grands ensembles de données.
 
-#### 1. Déclaration
-
+#### 1. Déclaration :
 Pour déclarer un tableau en C, on doit spécifier le type des éléments suivis du nom du tableau et du nombre d'éléments qu'il peut contenir :
 ```C
 int numbers[5]; // déclaration d'un tableau de 5 entiers
 ```
 
-#### 2. Initialisation
-
+#### 2. Initialisation :
 Comme pour n'importe quelle variable, un tableau peut être initialisé au moment de la déclaration. Pour ce faire, on fournit l'ensemble des éléments entre accolades, séparés par des virgules :
 ```C
 int numbers[3] = {1, 2, 3};
@@ -60,71 +56,62 @@ Dans ce cas, on peut laisser le compilateur déterminer la taille du tableau à 
 int numbers[] = {1, 2, 3};
 ```
 
-#### 3. Accès aux éléments
-
+#### 3. Accès aux éléments :
 Chaque élément d'un tableau est accessible via un indice, le premier élément ayant l'indice 0. On accède donc aux éléments du tableau en spécifiant l'indice désiré entre crochets :
 ```C
 int firstNumber = numbers[0]; // on enregistre la valeur du premier élément du tableau numbers dans une variable firstNumber
 numbers[1] = 100; // on modifie la valeur du deuxième élément du tableau
 ```
 
-### III. Les pointeurs
+### C. Les pointeurs
 
 Lorsqu'une variable est déclarée, un espace en mémoire est reservé pour enregistrer sa valeur. Cet espace possède une adresse. Les pointeurs sont des variables qui permettent d'enregistrer des adresses mémoire.
 
-#### 1. Déclaration
-
+#### 1. Déclaration :
 Pour déclarer un pointeur en C, on utilise le type de données que le pointeur désigne, suivi de l'opérateur `*`. Par exemple, si le pointeur pointe vers un espace mémoire contenant une variable de type int, on parlera d'un "pointeur sur int" :
 ```C
 int *ptr; // déclaration d'un pointeur sur int qu'on appelle ptr
 ```
 
-#### 2. Initialisation
-
+#### 2. Initialisation :
 En langage C, le symbole `&`, appelé **opérateur d'adresse**, est utilisé pour obtenir l'adresse mémoire d'une variable. Lorsqu'il est placé devant une variable, il renvoie l'adresse mémoire où cette variable est stockée. Pour initialiser notre pointeur sur int `ptr`, on va donc utiliser cet opérateur pour récupérer l'adresse mémoire d'un int : 
 ```C
 int number = 42;
 int *ptr = &number;
 ```
 
-#### 3. Déréférencement
-
+#### 3. Déréférencement :
 Pour accéder à la valeur pointée par un pointeur, on utilise l'**opérateur de déréférencement** `*`. Par exemple, pour accéder à la valeur de number via ptr :
 ```C
 int value = *ptr; // value vaudra alors 42
 ```
 
-#### 4. Pointeurs et tableaux
-
+#### 4. Pointeurs et tableaux :
 Lorsqu'on déclare un tableau en C, la variable déclarée est en fait un pointeur vers le premier élément du tableau :
 ```C
 int numbers[3] = {1, 2, 3};
 int *ptr = numbers; // pas besoin de l'opérateur d'adresse ici, puisque numbers est considéré commme un pointeur vers le premier élément du tableau
 ```
-
 Si on déréférence `ptr`, on obtiendra donc la valeur du premier élément de notre tableau, c'est à dire 1 :
 ```C
 int firstValue = *ptr // firstValue vaudra alors 1
 ```
 
-#### 5. Arithmétique des pointeurs
-
+#### 5. Arithmétique des pointeurs :
 On peut effectuer des opérations arithmétiques sur les pointeurs pour parcourir les éléments d'un tableau :
 ```C
 ptr = ptr + 1; // en incrémentant ptr, on déplace le curseur d'un cran, *ptr vaut alors 2
 ptr++; // ceci est une autre façon d'incrémenter un pointeur. *ptr vaut alors 3
 ```
 
-#### 6. Pointeur nul
-
+#### 6. Pointeur nul :
 En C, on peut assigner à un pointeur la valeur `NULL` pour signifier qu'il ne pointe vers aucune adresse valide :
 ```C
 int *ptr = NULL;
 ```
-Ça peut paraître trivial pour le moment, mais on verra plus tard que ça a son importance. 
+Ça peut paraître trivial pour le moment, mais on verra plus tard son importance. 
 
-#### 7. Les pointeurs de pointeur
-
+#### 7. Les pointeurs de pointeur :
 Puisqu'un pointeur n'est qu'une variable contenant une adresse mémoire, on peut avoir un pointeur faisant référence à un autre pointeur :
 ```C
 int number = 42;
@@ -139,14 +126,13 @@ Voici un tableau illustrant la façon dont tout ça est enregistré en mémoire 
 |            0x02           |           ptr2           |         0x01         |
 
 La variable `number` contient `42` et est enregistrée à l'adresse `0x00`. La variable `ptr1` est enregistrée à l'adresse `0x01` et contient l'adresse de la variable `number`, c'est à dire `0x00`. La variable `ptr2` est enregistrée à l'adresse `0x02`, et contient l'adresse de `ptr1`, c'est à dire `0x01`.
-
 Si on déréférence `ptr2`, on obtient `ptr1`. Si on déréférence deux fois `ptr2`, on obtiendra `number` :
 ```C
 int value = **ptr2; // value vaudra 42
 ```
 
 
-## Les opérateurs
+## IV. Les opérateurs
 
 ### 1. Les opérateurs arithmétiques :
 On utilise en C les opérateurs arithmétiques classiques (`+`, `-`, `*`, `/`) auxquelles il faut ajouter le *modulo* (`%`) qui sert à calculer le reste d'une division
@@ -182,7 +168,7 @@ int result2 = ++a; // a est incrémenté puis result2 prend la valeur de a
 ```
 
 
-## Les conditions
+## V. Les conditions
 
 Les conditions en C permettent de contrôler le flux d'exécution du programme en fonction de l'évaluation d'expressions booléennes (vrai ou faux). La structure conditionnelle la plus couramment utilisée est `if`, qui exécute un bloc de code si une condition donnée est vraie. Il est souvent accompagné de `else` pour spécifier un bloc de code alternatif à exécuter si la condition est fausse. Une autre variante, `else if`, permet de vérifier plusieurs conditions en séquence.
 
@@ -191,18 +177,65 @@ int number = 0;
 
 if (number < 0)
 {
-    printf("number est négatif);
+    // action si number est négatif
 }
 else if (number > 42)
 {
-    printf("number est positif);
+    // autre action si number est positif
 }
 else
 {
-    printf("number vaut 0");
+    // autre action si number vaut 0
 }
 ```
 
+Parler des accolades, dans quel cas on peut s'en passer. 
+
+
+## VI. Les boucles
+
+Les boucles sont des mécanismes qui permettent de répéter une série d'instructions plusieurs fois. C'est une fonctionnalité essentielle pour effectuer des tâches répétitives de manière efficace. Il existe différents types de boucles, mais seule la boucle `while` est autorisée pendant la piscine, et on va donc se concentrer sur celle-ci.
+
+#### 1. La boucle while :
+La boucle `while` exécute un bloc d'instructions tant qu'une condition spécifiée est vraie. La condition est vérifiée avant chaque exécution du bloc. Si la condition est fausse dès le début, le bloc d'instructions ne sera jamais exécuté :
+```C
+while (condition)
+{
+    //code à éxécuter
+}
+```
+
+#### 2. La commande break :
+La commande `break` permet de sortir immédiatement de la boucle, même si la condition est encore vraie :
+```C
+int i = 0;
+while (i < 5)
+{
+    if (i == 3)
+    {
+        break;
+    }
+    i++;
+}
+```
+Dans cet exemple, la boucle `while` s'exécute jusqu'à ce que i soit égal à 3, moment où la commande `break` est exécutée pour sortir de la boucle.
+
+#### 3. La commande continue :
+La commande `continue` permet de passer directement à l'itération suivante de la boucle, en sautant les instructions restantes dans le bloc de la boucle pour l'itération en cours :
+```C
+int i = 0;
+while (i < 5)
+{
+    i++;
+
+    if (i == 3)
+    {
+        continue;
+    }
+    // code à éxéctuer
+}
+```
+Dans cet exemple, lorsque i vaut 3, la commande `continue` est exécutée et le reste des instructions dans la boucle est ignoré pour cette itération.
 
 
 ## Les fonctions
