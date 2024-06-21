@@ -3,17 +3,13 @@
 Le C est un langage de programmation créé dans les années 1970, connu pour sa performance et sa flexibilité. En tant que langage de bas niveau, il se situe près du matériel informatique, permettant un contrôle précis des ressources matérielles comme la mémoire et le processeur. Cela le rend idéal pour développer des systèmes d'exploitation, des logiciels et des applications embarquées. Sa simplicité et sa puissance en font un langage incontournable en informatique.
 
 
-
 Le langage C est un langage de programmation compilé, ce qui signifie que le code source écrit par le programmeur doit être transformé en un code machine exécutable par l'ordinateur avant de pouvoir être exécuté. Ce processus de transformation est appelé compilation.
 
-## 
-## 
 
 ## Les instructions
 
 Un programme informatique est constitué d'une série d'instructions, c'est-à-dire de commandes données à l'ordinateur pour qu'il effectue des tâches spécifiques. En C, chaque instruction se termine par un point-virgule : `int number = 10;`
 
-</br>
 
 ## Les commentaires
 
@@ -23,7 +19,6 @@ Dans un programme informatique, les commentaires apportent de très précieuses 
 int age = 42; // ceci est un commenntaire en fin d'instruction
 ```
 
-</br>
 
 ## Les variables et les types de données
 
@@ -150,7 +145,6 @@ Si on déréférence `ptr2`, on obtient `ptr1`. Si on déréférence deux fois p
 int value = **ptr2; // value vaudra 42
 ```
 
-</br>
 
 ## Les fonctions
 
