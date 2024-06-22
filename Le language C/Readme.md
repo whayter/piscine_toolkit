@@ -268,9 +268,6 @@ Une fois qu'une fonction est déclarée et définit, on peut l'appeler dans notr
 int result = addition(2, 7); // result vaudra 9
 ```
 
-
-### Les fonctions sans paramètres et / ou sans retour
-
 Les fonctions peuvent aussi ne pas prendre de paramètres ou ne pas renvoyer de valeur. Voici un exemple de fonction qui affiche un message à l'écran :
 ```C
 void printMessage()
@@ -280,7 +277,8 @@ void printMessage()
 ```
 Ici, le mot clé `void` signigie que la fonction ne retourne aucune valeur. L'appel à cette fonction est fait de cette façon : `printMessage();`
 
-### La fonction *main*
+
+### B. La fonction *main*
 
 En C, la fonction *main* est le point d'entrée de tout programme. Elle est la première à être exécutée et doit systématiquement être présente. Essentielle, elle dirige l'exécution globale. La fonction *main* peut être déclarée de plusieurs façons, mais les deux formes les plus courantes sont les suivantes :
 
@@ -303,17 +301,15 @@ int main(int argc, char *argv[])
 ```
 Dans ce deuxième cas, l'argument `argv` est un tableau de pointeur sur char, c'est à dire un tableau de chaînes de caractères. L'arguement `argc` donne la taille de `argv`. De cette façon, on peut donner un nombre variable d'arguments à l'execution de notre programme. 
 
-
 Dans tous les cas, la fonction *main* retourne un entier. Le type de retour int indique le code de sortie du programme. Par convention, un retour de 0 signifie que le programme s'est terminé avec succès.
 
+#### C. Portée des variables
 
-#### Portée des variables :
-La portée d'une variable détermine où elle peut être utilisée dans le programme. Il existe deux types de portée : locale et globale.
+La portée d'une variable détermine où elle peut être utilisée dans le programme. Il existe deux types de portée :
+* portée locale : les variables déclarées à l'intérieur d'une fonction sont locales à cette fonction et ne peuvent pas être utilisées en dehors de celle-ci.
+* portée globale : les variables déclarées en dehors de toutes les fonctions sont globales et peuvent être utilisées par toutes les fonctions du programme.
 
-* Variables locales : les variables déclarées à l'intérieur d'une fonction sont locales à cette fonction et ne peuvent pas être utilisées en dehors de celle-ci.
-* Variables globales : les variables déclarées en dehors de toutes les fonctions sont globales et peuvent être utilisées par toutes les fonctions du programme.
-
-* **À noter** : une variable déclarée dans un bloc de code, c'est à dire décla
+**À noter** : une variable déclarée dans un bloc d'instruction est local à ce bloc. Par exemple, une variable déclarée dans une boucle `while` n'existe pas hors de la boucle.  
 
 
 ### VIII. Les bibliothèques en C
