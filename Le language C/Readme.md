@@ -4,6 +4,11 @@ Le C est un langage de programmation créé dans les années 1970, connu pour sa
 
 Le langage C est un langage de programmation compilé, ce qui signifie que le code source écrit par le programmeur doit être transformé en un code machine exécutable par l'ordinateur avant de pouvoir être exécuté. Ce processus de transformation est appelé compilation.
 
+parler des macros et des commandes de préprocesseur
+
+
+Parler des accolades, dans quel cas on peut s'en passer. 
+
 
 ## I. Les instructions
 
@@ -135,7 +140,7 @@ int value = **ptr2; // value vaudra 42
 ## IV. Les opérateurs
 
 ### 1. Les opérateurs arithmétiques :
-On utilise en C les opérateurs arithmétiques classiques (`+`, `-`, `*`, `/`) auxquelles il faut ajouter le *modulo* (`%`) qui sert à calculer le reste d'une division
+On utilise en C les opérateurs arithmétiques classiques (`+`, `-`, `*`, `/`) auxquelles il faut ajouter le *modulo* (`%`) qui sert à calculer le reste d'une division.
 
 ### 2. Les opérateurs de comparaison :
 On utilise en C les opérateurs de comparaison classiques (`<`, `<=`, `>`, `>=`). Pour vérifier une égalité, on utilise l'opétateur `==`, à ne pas confondre avec `=`qui sert à assigner une valeur. On utilise aussi `!=` pour vérifier une inégalité.
@@ -177,19 +182,17 @@ int number = 0;
 
 if (number < 0)
 {
-    // action si number est négatif
+    // code à éxécuter si number est négatif
 }
-else if (number > 42)
+else if (number > 0)
 {
-    // autre action si number est positif
+    // code à éxécuter si number est positif
 }
 else
 {
-    // autre action si number vaut 0
+    // code à éxécuter si number vaut 0
 }
 ```
-
-Parler des accolades, dans quel cas on peut s'en passer. 
 
 
 ## VI. Les boucles
@@ -218,7 +221,7 @@ while (i < 5)
     i++;
 }
 ```
-Dans cet exemple, la boucle `while` s'exécute jusqu'à ce que i soit égal à 3, moment où la commande `break` est exécutée pour sortir de la boucle.
+Dans cet exemple, la boucle `while` s'exécute jusqu'à ce que `i` soit égal à 3, moment où la commande `break` est exécutée pour sortir de la boucle.
 
 #### 3. La commande continue :
 La commande `continue` permet de passer directement à l'itération suivante de la boucle, en sautant les instructions restantes dans le bloc de la boucle pour l'itération en cours :
@@ -235,21 +238,24 @@ while (i < 5)
     // code à éxéctuer
 }
 ```
-Dans cet exemple, lorsque i vaut 3, la commande `continue` est exécutée et le reste des instructions dans la boucle est ignoré pour cette itération.
+Dans cet exemple, lorsque `i` vaut 3, la commande `continue` est exécutée et le reste des instructions dans la boucle est ignoré pour cette itération.
 
 
-## Les fonctions
+## VII. Les fonctions
 
-Les fonctions sont des blocs de code réutilisables qui effectuent une tâche spécifique. Elles permettent de structurer un programme en le découpant en sous-programmes plus petits et plus faciles à gérer. Les fonctions peuvent prendre des **arguments en entrée** et renvoyer une **valeur en sortie**.
+Les fonctions sont des blocs de code réutilisables qui permettent de diviser un programme en segments plus petits et plus faciles à gérer. Elles facilitent la compréhension, la maintenance et la réutilisation du code.
 
-### Déclaration et définition d'une fonction
+### A. Définition et déclaration des fonctions
 
-Une fonction en C est **déclarée** avec un type de retour, un nom et éventuellement une liste de paramètres entre parenthèses. Par exemple, voici comment déclarer une fonction qui additionne deux entiers :
+Une fonction en C se compose d'un type de retour, d'un nom de fonction et d'une liste de paramètres. La définition de la fonction inclut le corps de la fonction, c'est-à-dire le code à exécuter lorsque la fonction est appelée :
 ```C
-int addition(int a, int b);
+type_de_retour nom_de_fonction(paramètres)
+{
+    // Corps de la fonction
+}
 ```
 
-La **définition** de la fonction fournit le corps de la fonction, où les opérations sont effectuées :
+Voilà un exemple simple : 
 ```C
 int addition(int a, int b)
 {
@@ -258,13 +264,11 @@ int addition(int a, int b)
 ```
 Dans cette exemple, la fonction *addition* prend deux entiers `a` et `b` en paramètres et retourne un entier, résultat de la somme de `a` et de `b`.
 
-### Appel d'une fonction
-
-Une fois qu'une fonction est déclarée et définie, on peut l'appeler dans notre programme en utilisant son nom et en fournissant les arguments nécessaires :
+Une fois qu'une fonction est déclarée et définit, on peut l'appeler dans notre programme : 
 ```C
-int result = addition(5, 3); 
+int result = addition(2, 7); // result vaudra 9
 ```
-Dans cet exemple, on déclare une variable result de type int qui va stocker le résultat de l'appel à la fonction addition avec les paramètres 5 et 3. 
+
 
 ### Les fonctions sans paramètres et / ou sans retour
 
@@ -304,6 +308,19 @@ Dans ce deuxième cas, l'argument `argv` est un tableau de pointeur sur char, c'
 Dans tous les cas, la fonction *main* retourne un entier. Le type de retour int indique le code de sortie du programme. Par convention, un retour de 0 signifie que le programme s'est terminé avec succès.
 
 
-### Les appels systèmes / les librairies
+#### Portée des variables :
+La portée d'une variable détermine où elle peut être utilisée dans le programme. Il existe deux types de portée : locale et globale.
+
+* Variables locales : les variables déclarées à l'intérieur d'une fonction sont locales à cette fonction et ne peuvent pas être utilisées en dehors de celle-ci.
+* Variables globales : les variables déclarées en dehors de toutes les fonctions sont globales et peuvent être utilisées par toutes les fonctions du programme.
+
+* **À noter** : une variable déclarée dans un bloc de code, c'est à dire décla
 
 
+### VIII. Les bibliothèques en C
+
+Les bibliothèques (ou *librairies*) en C sont des collections de fonctions et de macros pré-compilées qu'on peut utiliser dans nos programmes. Elles permettent de réutiliser du code sans avoir à le réécrire, ce qui facilite la maintenance et la modularité des programmes.
+
+Voici quelques bibliothèques très utilisées :
+* `stdio.h` : contient notamment la fonction `printf()`
+* `stdlib.h` : contient notamment les fonctions `malloc`, `free`
