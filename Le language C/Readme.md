@@ -12,12 +12,12 @@ Parler des accolades, dans quel cas on peut s'en passer.
 
 ## I. Les instructions
 
-Un programme informatique est constitué d'une série d'instructions, c'est-à-dire de commandes données à l'ordinateur pour qu'il effectue des tâches spécifiques. En C, chaque instruction se termine par un point-virgule : `int number = 10;`
+Un programme informatique est constitué d'une série d'instructions, c'est-à-dire de commandes données à l'ordinateur pour qu'il effectue des tâches spécifiques. En C, chaque instruction se termine par un point-virgule : `int number = 10;`.
 
 
 ## II. Les commentaires
 
-Dans un programme informatique, les commentaires apportent de très précieuses informations pour ceux qui sont amenées à manipuler le code. Les commentaires sont ignorés lors de l'éxecution du programme. Il existe plusieurs façons de commenter en C, mais concentrons nous sur la méthode la plus simple : les commentaires sur une seule ligne. Pour cela, on utilise le symbole `//` suivi du commentaire :
+Dans un programme, les commentaires apportent de très précieuses informations pour ceux qui sont amenées à manipuler le code. Les commentaires sont ignorés lors de l'éxecution du programme. Il existe plusieurs façons de commenter en C, mais pour rester simple, je ne parlerai que des commentaires sur une seule ligne. Pour cela, on utilise le symbole `//` suivi du commentaire :
 ```C
 // ceci est un commentaire sur une ligne complète
 int age = 42; // ceci est un commenntaire en fin d'instruction
@@ -99,7 +99,7 @@ int *ptr = numbers; // pas besoin de l'opérateur d'adresse ici, puisque numbers
 ```
 Si on déréférence `ptr`, on obtiendra donc la valeur du premier élément de notre tableau, c'est à dire 1 :
 ```C
-int firstValue = *ptr // firstValue vaudra alors 1
+int firstValue = *ptr; // firstValue vaudra alors 1
 ```
 
 #### 5. Arithmétique des pointeurs :
@@ -114,7 +114,6 @@ En C, on peut assigner à un pointeur la valeur `NULL` pour signifier qu'il ne p
 ```C
 int *ptr = NULL;
 ```
-Ça peut paraître trivial pour le moment, mais on verra plus tard son importance. 
 
 #### 7. Les pointeurs de pointeur :
 Puisqu'un pointeur n'est qu'une variable contenant une adresse mémoire, on peut avoir un pointeur faisant référence à un autre pointeur :
@@ -165,7 +164,7 @@ int a = 10;
 a++; // a vaut maintenant 11
 a--; // a vaut à nouveau 10
 ```
-Ces opérateurs peuvent aussi être placé devant la variabe, en mode préfixe. Voilà en exemple l'impact que ça peut avoir :
+Ces opérateurs peuvent aussi être placés devant la variable. L'ordre a son importance, comme le montre cet exemple : 
 ```C
 int a = 10;
 int result1 = a++; // result1 prend la valeur de a puis est incrémenté
@@ -324,3 +323,12 @@ Les bibliothèques (ou *librairies*) en C sont des collections de fonctions et d
 Voici quelques bibliothèques très utilisées :
 * `stdio.h` : contient notamment la fonction `printf()`
 * `stdlib.h` : contient notamment les fonctions `malloc`, `free`
+
+
+### IX. La compilation
+
+Le langage C est un langage de programmation compilé, ce qui signifie que le code source écrit par le programmeur doit être transformé en un code machine exécutable par l'ordinateur avant de pouvoir être exécuté. Ce processus de transformation est appelé compilation.
+
+Il existe différents compilateurs, mais on va se concentrer sur `gcc`. 
+
+
